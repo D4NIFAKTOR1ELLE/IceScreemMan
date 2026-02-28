@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://k1epd3r2uous"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8b1d2"]
+
+[node name="SlidingPuzzle" type="ColorRect" unique_id=840341410]
+custom_minimum_size = Vector2(5.74, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.12941177)
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=458909402]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 500.0
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer" unique_id=594806627]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+columns = 3
+
+[node name="TextureButton" type="TextureButton" parent="CenterContainer/GridContainer" unique_id=597260589]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("PlaceholderTexture2D_8b1d2")
+ignore_texture_size = true
+
+[node name="TextureButton2" type="TextureButton" parent="CenterContainer/GridContainer" unique_id=760342076]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("PlaceholderTexture2D_8b1d2")
+ignore_texture_size = true
+
+[node name="TextureButton3" type="TextureButton" parent="CenterContainer/GridContainer" unique_id=1653969867]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("PlaceholderTexture2D_8b1d2")
+ignore_texture_size = true
+
+[node name="TextureButton4" type="TextureButton" parent="CenterContainer/GridContainer" unique_id=1517574002]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("PlaceholderTexture2D_8b1d2")
+ignore_texture_size = true
+
+[node name="TextureButton5" type="TextureButton" parent="CenterContainer/GridContainer" unique_id=1984392417]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("PlaceholderTexture2D_8b1d2")
+ignore_texture_size = true
+
+[node name="TextureButton6" type="TextureButton" parent="CenterContainer/GridContainer" unique_id=959302863]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("PlaceholderTexture2D_8b1d2")
+ignore_texture_size = true
+
+[node name="TextureButton7" type="TextureButton" parent="CenterContainer/GridContainer" unique_id=1206308545]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("PlaceholderTexture2D_8b1d2")
+ignore_texture_size = true
+
+[node name="TextureButton8" type="TextureButton" parent="CenterContainer/GridContainer" unique_id=1337926259]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("PlaceholderTexture2D_8b1d2")
+ignore_texture_size = true

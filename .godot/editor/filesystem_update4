@@ -1,5 +1,3 @@
 res://ui/TruckInside.tscn
-res://ui/TruckTheme.tres
-res://ui/truck_inside.gd
-res://Game.tscn
+res://game/SlidingPuzzle.tscn
 res://game/game.gd
