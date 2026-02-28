@@ -1,9 +1,159 @@
 [gd_scene format=3 uid="uid://c15mnuq4y1lrw"]
 
-[node name="TruckInside" type="Control" unique_id=1165396595]
+[ext_resource type="Theme" uid="uid://on8hmefb85mk" path="res://ui/TruckTheme.tres" id="1_2orec"]
+
+[sub_resource type="Theme" id="Theme_kba1j"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mb3o5"]
+
+[node name="TruckInside" type="CanvasLayer" unique_id=360068417]
+
+[node name="Control" type="Control" parent="." unique_id=1809332801]
 layout_mode = 3
-anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchor_bottom = 1.0401235
+theme = ExtResource("1_2orec")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Control" unique_id=1531100834]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.005934673
+anchor_right = 1.0
+anchor_bottom = 0.5043913
+offset_top = 304.00003
+offset_bottom = 304.00003
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="Control" unique_id=351633207]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017361112
+anchor_right = 0.5173611
+anchor_bottom = 0.95548964
+offset_left = 556.0
+offset_right = 556.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Sanity" type="Label" parent="Control" unique_id=2048519722]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.024588903
+anchor_top = -0.043154925
+anchor_right = 0.36256394
+anchor_bottom = 0.04172161
+offset_left = 630.3264
+offset_top = 29.08642
+offset_right = 662.8403
+offset_bottom = 48.691357
+theme = SubResource("Theme_kba1j")
+text = "Sanity"
+metadata/_edit_use_anchors_ = true
+
+[node name="TimeButton" type="Label" parent="Control" unique_id=1309789169]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.024588903
+anchor_top = 0.08493151
+anchor_right = 0.3738486
+anchor_bottom = 0.18369687
+offset_left = 630.3264
+offset_top = 106.96297
+offset_right = 685.3889
+offset_bottom = 145.01234
+text = "Time"
+metadata/_edit_use_anchors_ = true
+
+[node name="Time" type="Label" parent="Control" unique_id=1147665987]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.024429163
+anchor_top = 0.13300556
+anchor_right = 0.010570897
+anchor_bottom = 0.16800554
+offset_left = 630.32
+offset_top = 157.04
+offset_right = 695.92
+offset_bottom = 191.64
+theme = ExtResource("1_2orec")
+text = "00:00"
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressBar" type="ProgressBar" parent="Control" unique_id=414322818]
+layout_mode = 0
+offset_left = 617.0
+offset_top = 60.0
+offset_right = 1030.0
+offset_bottom = 87.0
+max_value = 5.0
+step = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1427271080]
+layout_mode = 0
+offset_left = 602.0
+offset_top = 60.0
+offset_right = 1015.4863
+offset_bottom = 109.0
+
+[node name="GridContainer" type="GridContainer" parent="Control" unique_id=1129066676]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14324982
+anchor_top = 0.5873041
+anchor_right = 0.14324982
+anchor_bottom = 0.5873041
+offset_left = 652.7819
+offset_top = 357.0809
+offset_right = 1081.27
+offset_bottom = 560.5078
+columns = 3
+
+[node name="TextureButton" type="TextureButton" parent="Control/GridContainer" unique_id=1614663341]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("PlaceholderTexture2D_mb3o5")
+
+[node name="TextureButton2" type="TextureButton" parent="Control/GridContainer" unique_id=1680682683]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("PlaceholderTexture2D_mb3o5")
+
+[node name="TextureButton3" type="TextureButton" parent="Control/GridContainer" unique_id=1067775787]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("PlaceholderTexture2D_mb3o5")
+
+[node name="TextureButton4" type="TextureButton" parent="Control/GridContainer" unique_id=1668323256]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("PlaceholderTexture2D_mb3o5")
+
+[node name="TextureButton5" type="TextureButton" parent="Control/GridContainer" unique_id=1279966033]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("PlaceholderTexture2D_mb3o5")
+
+[node name="TextureButton6" type="TextureButton" parent="Control/GridContainer" unique_id=398306513]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("PlaceholderTexture2D_mb3o5")
+
+[node name="Button" type="Button" parent="Control" unique_id=1315931439]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 389.0
+offset_right = 377.0
+offset_bottom = 579.0
+
+[node name="Button2" type="Button" parent="Control" unique_id=1474836018]
+layout_mode = 0
+offset_left = 530.0
+offset_top = 449.0
+offset_right = 616.74054
+offset_bottom = 520.3667
