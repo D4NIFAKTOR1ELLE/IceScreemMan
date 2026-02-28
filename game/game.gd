@@ -5,14 +5,19 @@ extends Node
 @onready var timer_text: Label = $TruckInside/Control/Time
 
 var current_flavour_roster: Array[String] = []
+var cone
 
 func _ready() -> void:
-	print("Game launched!")
+	launch_game()
+
+func launch_game():
 	Constants.game_instance = self
 	current_flavour_roster.clear()
+	cone = Constants.cone.instantiate()
 	
 	await pick_flavours()
 	
+	cone.initialise()
 	gametimer.start()
 
 func pick_flavours():

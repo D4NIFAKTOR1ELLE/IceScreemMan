@@ -6,16 +6,23 @@ const hard_range: Vector2i = Vector2i(3, 6)
 
 var game_instance
 var puzzles_until_win: int = 3
+var cone = load("res://game/elements/Cone.tscn")
 
 var flavours: Dictionary = {
 	"Pickles": Color.LIGHT_GREEN,
-	"Bull Red": Color.ORANGE,
+	"Bull Red": Color.LIGHT_CORAL,
 	"Vanilla": Color.ANTIQUE_WHITE,
 	"Hazelnut": Color.ROSY_BROWN,
 	"Caramel Squirrel": Color.SADDLE_BROWN,
 	"Lemon Drop": Color.YELLOW,
 	"Red Blueberry": Color.ORANGE_RED,
-	"Blue Strawberry": Color.MIDNIGHT_BLUE
+	"Blue Strawberry": Color.MIDNIGHT_BLUE,
+	"Lime Lizard": Color.CHARTREUSE,
+	"Cobble Stone Crunch": Color.DIM_GRAY,
+	"Laughing Lavender": Color.SLATE_BLUE,
+	"Purple Pineapple": Color.INDIGO,
+	"Lickable Llama": Color.PERU,
+	"OMG Orange": Color.ORANGE
 }
 
 var flavour_selection: Array[String] = [
@@ -26,4 +33,10 @@ var flavour_selection: Array[String] = [
 	"Caramel Squirrel",
 	"Lemon Drop",
 	"Red Blueberry",
-	"Blue Strawberry"]
+	"Blue Strawberry",
+	"Lime Lizard",
+	"Cobble Stone Crunch",
+	"Laughing Lavender",
+	"Purple Pineapple",
+	"Lickable Llama",
+	"OMG Orange"]

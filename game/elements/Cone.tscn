@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://nracvaq6653c"]
 
+[ext_resource type="Script" uid="uid://sthrie7rn5sf" path="res://game/elements/cone.gd" id="1_kvamh"]
+
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_shjki"]
 
-[node name="Cone" type="TextureRect" unique_id=680381478]
-offset_left = -17.0
-offset_top = -20.0
-offset_right = 21.0
-offset_bottom = 22.0
+[node name="Cone" type="Sprite2D" unique_id=1695950121]
+z_index = 2
+position = Vector2(-3.0994415e-06, -4.7683716e-07)
+scale = Vector2(96, 146)
 texture = SubResource("PlaceholderTexture2D_shjki")
+script = ExtResource("1_kvamh")

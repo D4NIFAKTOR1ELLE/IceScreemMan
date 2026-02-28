@@ -159,5 +159,13 @@ offset_top = 507.0
 offset_right = 605.74054
 offset_bottom = 578.3667
 
+[node name="ConeButton" type="Button" parent="Control" unique_id=130818121]
+layout_mode = 0
+offset_left = 926.0
+offset_top = 225.0
+offset_right = 1018.0
+offset_bottom = 338.0
+
 [connection signal="pressed" from="Control/Engine" to="." method="_on_engine_pressed"]
 [connection signal="pressed" from="Control/Ignition" to="." method="_on_ignition_pressed"]
+[connection signal="pressed" from="Control/ConeButton" to="." method="_on_cone_button_pressed"]
