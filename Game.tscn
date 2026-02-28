@@ -2,11 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://c15mnuq4y1lrw" path="res://ui/TruckInside.tscn" id="1_wbfu4"]
 [ext_resource type="Script" uid="uid://cjxcpil7s48nq" path="res://game/game.gd" id="1_xkndl"]
+[ext_resource type="PackedScene" uid="uid://defvlperpo7m4" path="res://ui/Puzzles.tscn" id="3_u44n3"]
 
 [node name="Game" type="Node" unique_id=1292676489]
 script = ExtResource("1_xkndl")
 
 [node name="TruckInside" parent="." unique_id=360068417 instance=ExtResource("1_wbfu4")]
+
+[node name="Puzzles" parent="." unique_id=2122768542 instance=ExtResource("3_u44n3")]
 
 [node name="GameTimer" type="Timer" parent="." unique_id=1234729530]
 wait_time = 240.0

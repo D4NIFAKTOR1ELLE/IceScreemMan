@@ -4,6 +4,9 @@ const easy_range: Vector2i = Vector2i(1, 2)
 const mid_range: Vector2i = Vector2i(2, 4)
 const hard_range: Vector2i = Vector2i(3, 6)
 
+var game_instance
+var puzzles_until_win: int = 3
+
 var flavours: Dictionary = {
 	"Pickles": Color.LIGHT_GREEN,
 	"Bull Red": Color.ORANGE,

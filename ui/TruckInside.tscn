@@ -2,7 +2,6 @@
 
 [ext_resource type="Theme" uid="uid://on8hmefb85mk" path="res://ui/TruckTheme.tres" id="1_2orec"]
 [ext_resource type="Script" uid="uid://u656pi8oxcjm" path="res://ui/truck_inside.gd" id="1_kba1j"]
-[ext_resource type="PackedScene" uid="uid://k1epd3r2uous" path="res://game/SlidingPuzzle.tscn" id="3_mb3o5"]
 
 [sub_resource type="Theme" id="Theme_kba1j"]
 
@@ -94,51 +93,57 @@ offset_bottom = 139.0
 [node name="GridContainer" type="GridContainer" parent="Control" unique_id=1129066676]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.14324982
-anchor_top = 0.5873041
-anchor_right = 0.14324982
-anchor_bottom = 0.5873041
-offset_left = 476.9762
-offset_top = -17.842987
-offset_right = 934.9762
-offset_bottom = 205.15701
+anchor_left = 0.5842014
+anchor_top = 0.52818984
+anchor_right = 0.9600694
+anchor_bottom = 0.9050445
+offset_top = 3.0517578e-05
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
 columns = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureButton" type="TextureButton" parent="Control/GridContainer" unique_id=1614663341]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = SubResource("PlaceholderTexture2D_mb3o5")
+stretch_mode = 0
 
 [node name="TextureButton2" type="TextureButton" parent="Control/GridContainer" unique_id=1680682683]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = SubResource("PlaceholderTexture2D_mb3o5")
+stretch_mode = 0
 
 [node name="TextureButton3" type="TextureButton" parent="Control/GridContainer" unique_id=1067775787]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = SubResource("PlaceholderTexture2D_mb3o5")
+stretch_mode = 0
 
 [node name="TextureButton4" type="TextureButton" parent="Control/GridContainer" unique_id=1668323256]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = SubResource("PlaceholderTexture2D_mb3o5")
+stretch_mode = 0
 
 [node name="TextureButton5" type="TextureButton" parent="Control/GridContainer" unique_id=1279966033]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = SubResource("PlaceholderTexture2D_mb3o5")
+stretch_mode = 0
 
 [node name="TextureButton6" type="TextureButton" parent="Control/GridContainer" unique_id=398306513]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = SubResource("PlaceholderTexture2D_mb3o5")
+stretch_mode = 0
 
 [node name="Engine" type="Button" parent="Control" unique_id=1315931439]
 layout_mode = 0
@@ -153,10 +158,6 @@ offset_left = 519.0
 offset_top = 507.0
 offset_right = 605.74054
 offset_bottom = 578.3667
-
-[node name="SlidingPuzzle" parent="." unique_id=840341410 instance=ExtResource("3_mb3o5")]
-visible = false
-metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Control/Engine" to="." method="_on_engine_pressed"]
 [connection signal="pressed" from="Control/Ignition" to="." method="_on_ignition_pressed"]

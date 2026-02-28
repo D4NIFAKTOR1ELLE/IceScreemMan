@@ -8,9 +8,10 @@ var current_flavour_roster: Array[String] = []
 
 func _ready() -> void:
 	print("Game launched!")
+	Constants.game_instance = self
 	current_flavour_roster.clear()
 	
-	pick_flavours()
+	await pick_flavours()
 	
 	gametimer.start()
 
@@ -20,14 +21,13 @@ func pick_flavours():
 	
 	for i in range(6):
 		current_flavour_roster.append(flavours.pop_back())
-	
-	print(current_flavour_roster)
+
+func win():
+	gametimer.stop()
+	print("You won!")
 
 func lose():
-	pass
-	
-func win():
-	pass
+	print("🤣🤣🤣🫵🫵🫵🫵")
 
 func _on_game_timer_timeout() -> void:
 	lose()
