@@ -9,5 +9,9 @@ script = ExtResource("1_xkndl")
 [node name="TruckInside" parent="." unique_id=360068417 instance=ExtResource("1_wbfu4")]
 
 [node name="GameTimer" type="Timer" parent="." unique_id=1234729530]
+wait_time = 240.0
+one_shot = true
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=146292514]
+
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
