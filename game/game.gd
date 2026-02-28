@@ -1,11 +1,22 @@
 extends Node
 
+@onready var gametimer: Timer = $GameTimer
+@onready var music: AudioStreamPlayer = $Music
+@onready var timer_text: Label = $TruckInside/Control/Time
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	print("Game launched!")
+	
+	gametimer.start()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func lose():
 	pass
+	
+func win():
+	pass
+
+func _on_game_timer_timeout() -> void:
+	lose()
+
+func _process(delta: float) -> void:
+	timer_text.set_text("%02d:%02d" % [gametimer.time_left / 60, fmod(gametimer.time_left, 60)])

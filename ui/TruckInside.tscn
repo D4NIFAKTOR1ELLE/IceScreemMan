@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://c15mnuq4y1lrw"]
 
 [ext_resource type="Theme" uid="uid://on8hmefb85mk" path="res://ui/TruckTheme.tres" id="1_2orec"]
+[ext_resource type="Script" uid="uid://u656pi8oxcjm" path="res://ui/truck_inside.gd" id="1_kba1j"]
 
 [sub_resource type="Theme" id="Theme_kba1j"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mb3o5"]
 
 [node name="TruckInside" type="CanvasLayer" unique_id=360068417]
+script = ExtResource("1_kba1j")
 
 [node name="Control" type="Control" parent="." unique_id=1809332801]
 layout_mode = 3
@@ -24,6 +26,7 @@ anchor_bottom = 0.5043913
 offset_top = 304.00003
 offset_bottom = 304.00003
 metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
 
 [node name="Panel2" type="Panel" parent="Control" unique_id=351633207]
 layout_mode = 1
@@ -34,18 +37,14 @@ anchor_bottom = 0.95548964
 offset_left = 556.0
 offset_right = 556.0
 metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
 
 [node name="Sanity" type="Label" parent="Control" unique_id=2048519722]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.024588903
-anchor_top = -0.043154925
-anchor_right = 0.36256394
-anchor_bottom = 0.04172161
-offset_left = 630.3264
-offset_top = 29.08642
-offset_right = 662.8403
-offset_bottom = 48.691357
+anchor_left = 0.5225694
+anchor_right = 0.9379461
+anchor_bottom = 0.11396398
 theme = SubResource("Theme_kba1j")
 text = "Sanity"
 metadata/_edit_use_anchors_ = true
@@ -144,16 +143,19 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = SubResource("PlaceholderTexture2D_mb3o5")
 
-[node name="Button" type="Button" parent="Control" unique_id=1315931439]
+[node name="Engine" type="Button" parent="Control" unique_id=1315931439]
 layout_mode = 0
 offset_left = 102.0
 offset_top = 389.0
 offset_right = 377.0
 offset_bottom = 579.0
 
-[node name="Button2" type="Button" parent="Control" unique_id=1474836018]
+[node name="Ignition" type="Button" parent="Control" unique_id=1474836018]
 layout_mode = 0
 offset_left = 530.0
 offset_top = 449.0
 offset_right = 616.74054
 offset_bottom = 520.3667
+
+[connection signal="pressed" from="Control/Engine" to="." method="_on_engine_pressed"]
+[connection signal="pressed" from="Control/Ignition" to="." method="_on_ignition_pressed"]
