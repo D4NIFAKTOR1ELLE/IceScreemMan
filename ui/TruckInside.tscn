@@ -98,10 +98,10 @@ anchor_left = 0.14324982
 anchor_top = 0.5873041
 anchor_right = 0.14324982
 anchor_bottom = 0.5873041
-offset_left = 652.7819
-offset_top = 357.0809
-offset_right = 1081.27
-offset_bottom = 560.5078
+offset_left = 476.9762
+offset_top = -17.842987
+offset_right = 934.9762
+offset_bottom = 205.15701
 columns = 3
 
 [node name="TextureButton" type="TextureButton" parent="Control/GridContainer" unique_id=1614663341]
@@ -149,10 +149,10 @@ offset_bottom = 579.0
 
 [node name="Ignition" type="Button" parent="Control" unique_id=1474836018]
 layout_mode = 0
-offset_left = 530.0
-offset_top = 449.0
-offset_right = 616.74054
-offset_bottom = 520.3667
+offset_left = 519.0
+offset_top = 507.0
+offset_right = 605.74054
+offset_bottom = 578.3667
 
 [node name="SlidingPuzzle" parent="." unique_id=840341410 instance=ExtResource("3_mb3o5")]
 visible = false

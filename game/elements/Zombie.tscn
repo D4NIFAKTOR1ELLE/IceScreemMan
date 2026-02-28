@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cxm1oem6unq2m"]
+
+[ext_resource type="Script" uid="uid://cbhgcccaqjmh2" path="res://game/elements/zombie.gd" id="1_ioe0b"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jj1ps"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ioe0b"]
+
+[node name="Zombie" type="Control" unique_id=220221898]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ioe0b")
+
+[node name="Head" type="TextureRect" parent="." unique_id=1770545836]
+layout_mode = 0
+offset_left = -20.0
+offset_top = -57.0
+offset_right = 20.0
+offset_bottom = -17.0
+texture = SubResource("PlaceholderTexture2D_jj1ps")
+
+[node name="Body" type="TextureRect" parent="." unique_id=220306732]
+layout_mode = 0
+offset_left = -34.0
+offset_top = -21.0
+offset_right = 35.0
+offset_bottom = 43.0
+texture = SubResource("PlaceholderTexture2D_ioe0b")

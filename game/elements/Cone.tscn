@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://nracvaq6653c"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_shjki"]
+
+[node name="Cone" type="TextureRect" unique_id=680381478]
+offset_left = -17.0
+offset_top = -20.0
+offset_right = 21.0
+offset_bottom = 22.0
+texture = SubResource("PlaceholderTexture2D_shjki")
