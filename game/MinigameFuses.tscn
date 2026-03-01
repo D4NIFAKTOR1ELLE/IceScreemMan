@@ -7,8 +7,8 @@
 layout_mode = 3
 anchors_preset = 0
 offset_left = -9.0
-offset_top = -6.0
-offset_right = 1176.0
+offset_top = 19.0
+offset_right = 552.0
 offset_bottom = 675.0
 script = ExtResource("1_357ut")
 
@@ -20,10 +20,12 @@ anchor_right = 0.32405064
 anchor_bottom = 0.6769457
 metadata/_edit_use_anchors_ = true
 
-[node name="FuseHolder" type="Control" parent="." unique_id=1886233160]
-anchors_preset = 0
+[node name="FuseHolder" type="Node2D" parent="." unique_id=511068142]
+position = Vector2(13, 10)
+metadata/_edit_use_anchors_ = true
 
 [node name="WinLabel" type="Label" parent="." unique_id=936906678]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.36118144
@@ -40,11 +42,12 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="." unique_id=1200473965]
 layout_mode = 0
-offset_left = 240.0
-offset_top = 520.0
-offset_right = 420.0
-offset_bottom = 560.0
+anchor_left = 0.20253165
+anchor_top = 0.76358294
+anchor_right = 0.35443038
+anchor_bottom = 0.8223201
 text = "Show Diagram"
+metadata/_edit_use_anchors_ = true
 
 [node name="FuseDiagram" type="Control" parent="." unique_id=1892522400]
 visible = false

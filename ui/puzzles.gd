@@ -9,8 +9,8 @@ var puzzles: Array
 var current_puzzle: Node = null
 
 func initialise():
-	puzzles = [sliding_puzzle, fuse_puzzle, whack_a_mole_puzzle]
-	puzzles.shuffle()
+	puzzles = [sliding_puzzle, whack_a_mole_puzzle, fuse_puzzle]
+	#puzzles.shuffle()
 	
 	choose()
 	
@@ -29,3 +29,6 @@ func on_puzzle_beaten():
 	current_puzzle.queue_free()
 
 	choose()
+
+func _on_visibility_changed() -> void:
+	pass

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://defvlperpo7m4"]
 
 [ext_resource type="Script" uid="uid://iqbm7f8r7wsx" path="res://ui/puzzles.gd" id="1_24mw7"]
+[ext_resource type="PackedScene" uid="uid://bfsxa50yf0v3t" path="res://game/MinigameFuses.tscn" id="2_4ni2q"]
 
 [node name="Puzzles" type="CanvasLayer" unique_id=2122768542]
 layer = 3
@@ -12,7 +13,11 @@ anchor_left = 0.4296875
 anchor_top = 0.033950616
 anchor_right = 0.9652778
 anchor_bottom = 0.97530866
+mouse_filter = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="FuseMinigame" parent="PanelContainer" unique_id=722900997 instance=ExtResource("2_4ni2q")]
+layout_mode = 2
 
 [node name="ExitButton" type="Button" parent="." unique_id=1192948891]
 anchors_preset = -1
@@ -25,3 +30,5 @@ offset_top = 27.44898
 offset_right = -44.916016
 offset_bottom = 27.448982
 metadata/_edit_use_anchors_ = true
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

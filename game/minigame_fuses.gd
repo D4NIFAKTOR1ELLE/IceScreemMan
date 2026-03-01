@@ -62,8 +62,8 @@ func _spawn_fuses():
 	var values = slots.map(func(s): return s.get_meta("accepted_value"))
 	values.shuffle()
 
-	var vp_h = get_viewport_rect().size.y
-	var right_x = get_viewport_rect().size.x - FUSE_SIZE.x / 2.0 - 20.0
+	var vp_h = self.get_rect().size.y
+	var right_x = self.get_rect().size.x - FUSE_SIZE.x / 2.0 - 20.0
 	var spacing = FUSE_SIZE.y + 10.0
 	var max_rows = int((vp_h - 40.0) / spacing)
 
