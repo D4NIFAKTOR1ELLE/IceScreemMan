@@ -19,7 +19,7 @@ func _on_ignition_pressed() -> void:
 
 func _on_flavour_pressed(flavour_name: Node):
 	if Constants.new_cone:
-		Constants.new_cone.add_scoop(Constants.flavours.get(flavour_name.name))
+		Constants.new_cone.add_scoop(flavour_name)
 
 func _on_cone_button_pressed() -> void:
 	Constants.new_cone = Constants.cone.instantiate()

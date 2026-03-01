@@ -1,9 +1,12 @@
 extends Node
 
 @onready var gametimer: Timer = $GameTimer
+@onready var zombietimer: Timer = $ZombieTimer
+
 @onready var music: AudioStreamPlayer = $Music
 @onready var timer_text: Label = $TruckInside/Control/Time
 @onready var truck_inside: CanvasLayer = $TruckInside
+@onready var zombie_window: CanvasLayer = $ZombieWindow
 
 var current_flavour_roster: Array[String] = []
 
@@ -37,6 +40,11 @@ func lose():
 
 func _on_game_timer_timeout() -> void:
 	lose()
+
+func _on_zombie_timer_timeout() -> void:
+	zombie_window.spawn_zombie()
+	
+	zombietimer.start()
 
 func _process(_delta: float) -> void:
 	timer_text.set_text("%02d:%02d" % [gametimer.time_left / 60, fmod(gametimer.time_left, 60)])
