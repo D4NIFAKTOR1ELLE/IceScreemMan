@@ -28,7 +28,7 @@ func _ready() -> void:
 
 func spawn():
 	for scoop in randi_range(1, 6):
-		var random_request: String = Constants.game_instance.current_flavour_roster.pick_random()
+		var random_request: String = Game.current_flavour_roster.pick_random()
 		var new_request_scoop = request_scoop.duplicate()
 
 		request.append(random_request)
@@ -41,10 +41,10 @@ func spawn():
 
 func leave_angrily():
 	Constants.sanity = Constants.sanity - 1
-	Constants.game_instance.truck_inside.sanity_bar.value -= 1
+	Game.truck_inside.sanity_bar.value -= 1
 	
 	if Constants.sanity == 0:
-		Constants.game_instance.lose()
+		Game.lose()
 		
 	left.emit()
 		

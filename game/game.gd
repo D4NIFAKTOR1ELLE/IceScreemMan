@@ -1,6 +1,4 @@
-extends Node
-
-class_name Game
+extends CanvasLayer
 
 @onready var gametimer: Timer = $GameTimer
 @onready var zombietimer: Timer = $ZombieTimer
@@ -13,12 +11,9 @@ class_name Game
 
 var current_flavour_roster: Array[String] = []
 
-func _ready() -> void:
-	launch_game()
-
 func launch_game():
-	Constants.game_instance = self
 	current_flavour_roster.clear()
+	pick_flavours()
 	
 	Constants.sanity = Constants.max_sanity
 	truck_inside.sanity_overlay.size.x = 70 * Constants.max_sanity
@@ -27,8 +22,7 @@ func launch_game():
 	truck_inside.sanity_bar.size = truck_inside.sanity_overlay.size 
 	puzzle_window.initialise()
 	
-	await pick_flavours()
-	
+	zombietimer.start()
 	gametimer.start()
 
 func pick_flavours():

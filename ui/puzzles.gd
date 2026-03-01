@@ -24,7 +24,7 @@ func on_puzzle_beaten():
 	Constants.puzzles_until_win -= 1
 	
 	if Constants.puzzles_until_win == 0:
-		Constants.game_instance.win()
+		Game.win()
 
 	current_puzzle.queue_free()
 

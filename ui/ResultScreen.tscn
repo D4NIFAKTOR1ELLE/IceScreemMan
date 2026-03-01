@@ -1,16 +1,18 @@
 [gd_scene format=3 uid="uid://bebxnfodv5cp8"]
 
+[ext_resource type="Script" uid="uid://bjuaw81stgquc" path="res://ui/result_screen.gd" id="1_e6jkr"]
 [ext_resource type="Texture2D" uid="uid://cvlbjilhixub" path="res://assets/art/extra/sanity_box.png" id="1_rte7b"]
 [ext_resource type="Texture2D" uid="uid://20grbvcf3w7k" path="res://icon.svg" id="2_x707d"]
 [ext_resource type="Texture2D" uid="uid://j6khq44w3qv0" path="res://assets/art/Placeholder/PlaceHolderZombieHead.png" id="3_e6jkr"]
 
-[node name="StartScreen" type="Control" unique_id=2071207771]
+[node name="ResultScreen" type="Control" unique_id=2071207771]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_e6jkr")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=484593810]
 layout_mode = 1
@@ -100,7 +102,7 @@ vertical_alignment = 1
 
 [node name="ZombieContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1603921077]
 layout_mode = 2
-size_flags_vertical = 10
+size_flags_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/ZombieContainer" unique_id=224391518]
 custom_minimum_size = Vector2(80, 80)
@@ -131,6 +133,7 @@ stretch_mode = 5
 
 [node name="ScoreContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1782155262]
 layout_mode = 2
+size_flags_vertical = 2
 
 [node name="Label2" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/ScoreContainer" unique_id=74284199]
 layout_mode = 2
@@ -144,3 +147,13 @@ layout_mode = 2
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 28
 text = "0/3"
+
+[node name="Button" type="Button" parent="TextureRect" unique_id=1666468333]
+layout_mode = 0
+offset_left = 477.0
+offset_top = 526.0
+offset_right = 710.0
+offset_bottom = 575.0
+text = "Back to Start Screen"
+
+[connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]

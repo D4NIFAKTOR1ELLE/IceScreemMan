@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Ice Screem Man"
-run/main_scene="uid://bghqkshvrsfku"
+run/main_scene="uid://c3hotr6bulesh"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Constants="*uid://c1jsla0i162ur"
+Game="*uid://bghqkshvrsfku"
 
 [display]
 

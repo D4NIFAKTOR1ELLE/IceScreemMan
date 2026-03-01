@@ -14,7 +14,7 @@ func initialise(flavour_array: Array[String]):
 		index = index + 1
 
 func _on_engine_pressed() -> void:
-	Constants.game_instance.puzzle_window.visible = Constants.game_instance.puzzle_window.visible
+	Game.puzzle_window.visible = !Game.puzzle_window.visible
 
 func _on_ignition_pressed() -> void:
 	pass # Replace with function body.
