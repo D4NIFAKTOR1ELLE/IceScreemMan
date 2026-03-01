@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 @export var GRID_COLS : int = 3
@@ -13,13 +13,7 @@ const FUSE_COLORS : Dictionary = {
 }
 
 
-func _ready() -> void:
-	_build_diagram()
-
-
-func _build_diagram() -> void:
-	var values : Array = FuseData.slot_values
-
+func _build_diagram(values: Array) -> void:
 	if values.is_empty():
 		var lbl := Label.new()
 		lbl.text = "No fuse data yet."
@@ -58,7 +52,6 @@ func _build_diagram() -> void:
 		val_lbl.add_theme_font_size_override("font_size", 16)
 		val_lbl.add_theme_color_override("font_color", Color.BLACK)
 		add_child(val_lbl)
-
 
 func _format_value(v: float) -> String:
 	if v == int(v):

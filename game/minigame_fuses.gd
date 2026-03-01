@@ -1,8 +1,6 @@
-extends Node2D
+extends Control
 
 signal puzzle_solved
-
-var simultaneous_scene = preload("res://game/FuseDiagram.tscn").instantiate()
 
 const VALUE_POOL = [7.5, 10.0, 15.0, 30.0]
 @export var FUSE_SIZE = Vector2(90, 48)
@@ -18,6 +16,7 @@ const FUSE_COLORS = {
 
 var slots = []
 var fuses = []
+var slot_values : Array = []
 var dragged_fuse = null
 var drag_offset = Vector2.ZERO
 
@@ -28,6 +27,7 @@ var slot_to_fuse = {}
 @onready var slot_grid = $SlotGrid
 @onready var fuse_holder = $FuseHolder
 @onready var win_label = $WinLabel
+@onready var fuse_diagram = $FuseDiagram
 
 
 func _ready():
@@ -35,14 +35,14 @@ func _ready():
 	slot_grid.columns = GRID_COLS
 	_spawn_slots()
 	_spawn_fuses()
-
+	fuse_diagram._build_diagram(slot_values)
 
 func _spawn_slots():
 	var values = []
 	for i in NUM_SLOTS:
 		values.append(VALUE_POOL[randi() % VALUE_POOL.size()])
 
-	FuseData.slot_values = values.duplicate()
+	slot_values = values.duplicate()
 
 	for v in values:
 		var slot = TextureButton.new()
@@ -178,4 +178,7 @@ func _format_value(v):
 	return str(v) + "A"
 
 func _on_button_pressed() -> void:
-	get_tree().root.add_child(simultaneous_scene)
+	if fuse_diagram.visible:
+		fuse_diagram.hide()
+	else:
+		fuse_diagram.show()

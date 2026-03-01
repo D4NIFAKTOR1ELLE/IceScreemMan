@@ -1,30 +1,36 @@
 [gd_scene format=3 uid="uid://bfsxa50yf0v3t"]
 
 [ext_resource type="Script" uid="uid://cysbhnok5qm0d" path="res://game/minigame_fuses.gd" id="1_357ut"]
+[ext_resource type="Script" uid="uid://bkowv0s8mdj4w" path="res://game/elements/FuseDiagram.gd" id="2_e0hxx"]
 
-[node name="FuseMinigame" type="Node2D" unique_id=1059799517]
+[node name="FuseMinigame" type="Control" unique_id=722900997]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -9.0
+offset_top = -6.0
+offset_right = 1176.0
+offset_bottom = 675.0
 script = ExtResource("1_357ut")
 
-[node name="Background" type="ColorRect" parent="." unique_id=1727271176]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-color = Color(0.12, 0.12, 0.15, 1)
-
 [node name="SlotGrid" type="GridContainer" parent="." unique_id=2099201573]
-offset_left = 384.0
-offset_top = 256.0
-offset_right = 384.0
-offset_bottom = 256.0
+layout_mode = 0
+anchor_left = 0.13586497
+anchor_top = 0.37591776
+anchor_right = 0.32405064
+anchor_bottom = 0.6769457
+metadata/_edit_use_anchors_ = true
 
-[node name="FuseHolder" type="Node2D" parent="." unique_id=967381914]
+[node name="FuseHolder" type="Control" parent="." unique_id=1886233160]
+anchors_preset = 0
 
 [node name="WinLabel" type="Label" parent="." unique_id=936906678]
-offset_left = 83.0
-offset_top = 267.0
-offset_right = 483.0
-offset_bottom = 347.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.36118144
+anchor_top = 0.6152717
+anchor_right = 0.69873416
+anchor_bottom = 0.73274595
+offset_top = -3.0517578e-05
 theme_override_colors/font_color = Color(0.3, 1, 0.4, 1)
 theme_override_font_sizes/font_size = 28
 text = "✔  All fuses correct!"
@@ -33,10 +39,24 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="." unique_id=1200473965]
+layout_mode = 0
 offset_left = 240.0
 offset_top = 520.0
-offset_right = 320.0
+offset_right = 420.0
 offset_bottom = 560.0
-text = "test"
+text = "Show Diagram"
+
+[node name="FuseDiagram" type="Control" parent="." unique_id=1892522400]
+visible = false
+anchors_preset = 0
+script = ExtResource("2_e0hxx")
+GRID_COLS = 2
+
+[node name="Background" type="ColorRect" parent="FuseDiagram" unique_id=934984322]
+layout_mode = 0
+offset_right = 330.0
+offset_bottom = 230.0
+mouse_filter = 2
+color = Color(0.1, 0.1, 0.13, 1)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
