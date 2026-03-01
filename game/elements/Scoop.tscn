@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://p07enkwwxok4"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kvamh"]
+
+[node name="1" type="TextureRect" unique_id=1714493307]
+offset_left = 1.0
+offset_top = 147.0
+offset_right = 70.0
+offset_bottom = 214.0
+texture = SubResource("PlaceholderTexture2D_kvamh")

@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://nracvaq6653c"]
 
 [ext_resource type="Script" uid="uid://sthrie7rn5sf" path="res://game/elements/cone.gd" id="1_kvamh"]
+[ext_resource type="PackedScene" uid="uid://p07enkwwxok4" path="res://game/elements/Scoop.tscn" id="2_xqco8"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_shjki"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kvamh"]
 
 [node name="Cone" type="Control" unique_id=846486343]
 layout_mode = 3
@@ -34,10 +33,15 @@ offset_right = 32.0
 offset_bottom = -2.0
 mouse_filter = 2
 
-[node name="1" type="TextureRect" parent="Scoops" unique_id=972676979]
+[node name="0" parent="Scoops" unique_id=1714493307 instance=ExtResource("2_xqco8")]
+visible = false
 layout_mode = 0
-offset_left = 1.0
-offset_top = 147.0
-offset_right = 70.0
-offset_bottom = 214.0
-texture = SubResource("PlaceholderTexture2D_kvamh")
+anchor_left = 0.014084507
+anchor_top = 0.68372095
+anchor_right = 0.9859155
+anchor_bottom = 0.9953488
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+metadata/_edit_use_anchors_ = true
