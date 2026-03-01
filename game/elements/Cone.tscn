@@ -4,9 +4,39 @@
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_shjki"]
 
-[node name="Cone" type="Sprite2D" unique_id=1695950121]
-z_index = 2
-position = Vector2(-3.0994415e-06, -4.7683716e-07)
-scale = Vector2(96, 146)
-texture = SubResource("PlaceholderTexture2D_shjki")
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kvamh"]
+
+[node name="Cone" type="Control" unique_id=846486343]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset_ratio = Vector2(50, 50)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
 script = ExtResource("1_kvamh")
+
+[node name="Waffle" type="TextureRect" parent="." unique_id=2131034421]
+layout_mode = 0
+offset_left = -49.0
+offset_top = -59.0
+offset_right = 42.0
+offset_bottom = 77.0
+texture = SubResource("PlaceholderTexture2D_shjki")
+
+[node name="Scoops" type="Control" parent="." unique_id=1945018035]
+anchors_preset = 0
+offset_left = -39.0
+offset_top = -217.0
+offset_right = 32.0
+offset_bottom = -2.0
+mouse_filter = 2
+
+[node name="1" type="TextureRect" parent="Scoops" unique_id=972676979]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 147.0
+offset_right = 70.0
+offset_bottom = 214.0
+texture = SubResource("PlaceholderTexture2D_kvamh")

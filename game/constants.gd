@@ -4,6 +4,10 @@ const easy_range: Vector2i = Vector2i(1, 2)
 const mid_range: Vector2i = Vector2i(2, 4)
 const hard_range: Vector2i = Vector2i(3, 6)
 
+const scoop_limit: int = 6
+
+var new_cone: Cone
+var cone_in_hand: bool = false
 var game_instance
 var puzzles_until_win: int = 3
 var cone = load("res://game/elements/Cone.tscn")

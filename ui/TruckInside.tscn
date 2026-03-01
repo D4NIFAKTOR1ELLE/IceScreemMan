@@ -14,6 +14,7 @@ script = ExtResource("1_kba1j")
 layout_mode = 3
 anchor_right = 1.0
 anchor_bottom = 1.0401235
+mouse_filter = 2
 theme = ExtResource("1_2orec")
 metadata/_edit_use_anchors_ = true
 
@@ -23,6 +24,7 @@ anchors_preset = -1
 anchor_top = 0.49703264
 anchor_right = 1.0
 anchor_bottom = 0.9599407
+mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Panel2" type="Panel" parent="Control" unique_id=351633207]
@@ -31,6 +33,7 @@ anchors_preset = -1
 anchor_left = 0.5034722
 anchor_right = 1.0
 anchor_bottom = 0.95548964
+mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Sanity" type="Label" parent="Control" unique_id=2048519722]
@@ -90,7 +93,7 @@ offset_top = 84.0
 offset_right = 1102.0
 offset_bottom = 139.0
 
-[node name="GridContainer" type="GridContainer" parent="Control" unique_id=1129066676]
+[node name="Flavours" type="GridContainer" parent="Control" unique_id=1129066676]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5842014
@@ -103,42 +106,42 @@ theme_override_constants/v_separation = 6
 columns = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureButton" type="TextureButton" parent="Control/GridContainer" unique_id=1614663341]
+[node name="TextureButton" type="TextureButton" parent="Control/Flavours" unique_id=1614663341]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = SubResource("PlaceholderTexture2D_mb3o5")
 stretch_mode = 0
 
-[node name="TextureButton2" type="TextureButton" parent="Control/GridContainer" unique_id=1680682683]
+[node name="TextureButton2" type="TextureButton" parent="Control/Flavours" unique_id=1680682683]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = SubResource("PlaceholderTexture2D_mb3o5")
 stretch_mode = 0
 
-[node name="TextureButton3" type="TextureButton" parent="Control/GridContainer" unique_id=1067775787]
+[node name="TextureButton3" type="TextureButton" parent="Control/Flavours" unique_id=1067775787]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = SubResource("PlaceholderTexture2D_mb3o5")
 stretch_mode = 0
 
-[node name="TextureButton4" type="TextureButton" parent="Control/GridContainer" unique_id=1668323256]
+[node name="TextureButton4" type="TextureButton" parent="Control/Flavours" unique_id=1668323256]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = SubResource("PlaceholderTexture2D_mb3o5")
 stretch_mode = 0
 
-[node name="TextureButton5" type="TextureButton" parent="Control/GridContainer" unique_id=1279966033]
+[node name="TextureButton5" type="TextureButton" parent="Control/Flavours" unique_id=1279966033]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = SubResource("PlaceholderTexture2D_mb3o5")
 stretch_mode = 0
 
-[node name="TextureButton6" type="TextureButton" parent="Control/GridContainer" unique_id=398306513]
+[node name="TextureButton6" type="TextureButton" parent="Control/Flavours" unique_id=398306513]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3

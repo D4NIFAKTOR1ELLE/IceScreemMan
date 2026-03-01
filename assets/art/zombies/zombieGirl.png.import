@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqdj8l0vebv52"
-path="res://.godot/imported/image.png-94765ee4f1038b579f9fe9520c39f4c8.ctex"
+uid="uid://cft1cotckd26e"
+path="res://.godot/imported/zombieGirl.png-3fef8b7b866ac210385ef28f943db87f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/image.png"
-dest_files=["res://.godot/imported/image.png-94765ee4f1038b579f9fe9520c39f4c8.ctex"]
+source_file="res://assets/art/zombies/zombieGirl.png"
+dest_files=["res://.godot/imported/zombieGirl.png-3fef8b7b866ac210385ef28f943db87f.ctex"]
 
 [params]
 

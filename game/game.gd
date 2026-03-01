@@ -3,9 +3,9 @@ extends Node
 @onready var gametimer: Timer = $GameTimer
 @onready var music: AudioStreamPlayer = $Music
 @onready var timer_text: Label = $TruckInside/Control/Time
+@onready var truck_inside: CanvasLayer = $TruckInside
 
 var current_flavour_roster: Array[String] = []
-var cone
 
 func _ready() -> void:
 	launch_game()
@@ -13,11 +13,9 @@ func _ready() -> void:
 func launch_game():
 	Constants.game_instance = self
 	current_flavour_roster.clear()
-	cone = Constants.cone.instantiate()
 	
 	await pick_flavours()
 	
-	cone.initialise()
 	gametimer.start()
 
 func pick_flavours():
@@ -26,6 +24,9 @@ func pick_flavours():
 	
 	for i in range(6):
 		current_flavour_roster.append(flavours.pop_back())
+	
+	print(current_flavour_roster)
+	truck_inside.initialise(current_flavour_roster)
 
 func win():
 	gametimer.stop()

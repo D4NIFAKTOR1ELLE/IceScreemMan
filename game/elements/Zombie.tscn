@@ -6,6 +6,9 @@
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ioe0b"]
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tg2ng"]
+size = Vector2(15, 15)
+
 [node name="Zombie" type="Control" unique_id=220221898]
 layout_mode = 3
 anchors_preset = 0
@@ -26,3 +29,67 @@ offset_top = -21.0
 offset_right = 35.0
 offset_bottom = 43.0
 texture = SubResource("PlaceholderTexture2D_ioe0b")
+
+[node name="RequestBubble" type="ColorRect" parent="." unique_id=972599972]
+layout_mode = 0
+offset_left = 27.0
+offset_top = -67.0
+offset_right = 85.0
+offset_bottom = -27.0
+
+[node name="Requests" type="GridContainer" parent="RequestBubble" unique_id=1056846969]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 55.0
+offset_bottom = 37.0
+columns = 3
+
+[node name="TextureRect" type="TextureRect" parent="RequestBubble/Requests" unique_id=1434150639]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("PlaceholderTexture2D_tg2ng")
+stretch_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="RequestBubble/Requests" unique_id=526596957]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("PlaceholderTexture2D_tg2ng")
+stretch_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="RequestBubble/Requests" unique_id=783139956]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("PlaceholderTexture2D_tg2ng")
+stretch_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="RequestBubble/Requests" unique_id=954855308]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("PlaceholderTexture2D_tg2ng")
+stretch_mode = 2
+
+[node name="TextureRect5" type="TextureRect" parent="RequestBubble/Requests" unique_id=932443909]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("PlaceholderTexture2D_tg2ng")
+stretch_mode = 2
+
+[node name="TextureRect6" type="TextureRect" parent="RequestBubble/Requests" unique_id=1901872917]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("PlaceholderTexture2D_tg2ng")
+stretch_mode = 2
+
+[node name="Timer" type="Timer" parent="." unique_id=130927282]
