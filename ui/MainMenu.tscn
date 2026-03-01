@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://c3hotr6bulesh"]
 
-[ext_resource type="Script" uid="uid://c6xplk3jux5p0" path="res://ui/main_menu.gd" id="1_8v85u"]
-[ext_resource type="FontFile" uid="uid://c0e4wih8f2tt0" path="res://assets/fonts/calligtastrophe/Calligstrophe.ttf" id="2_x262b"]
-[ext_resource type="Texture2D" uid="uid://dmd6xp8g71l84" path="res://assets/art/extra/cone_scoop.png" id="3_qo3sn"]
-[ext_resource type="Texture2D" uid="uid://dh6n3gxhydirk" path="res://assets/art/extra/cone.png" id="4_g5fyd"]
+[ext_resource type="Script" uid="uid://c6xplk3jux5p0" path="res://game/main_menu.gd" id="1_iek8j"]
+[ext_resource type="FontFile" uid="uid://c0e4wih8f2tt0" path="res://assets/fonts/calligtastrophe/Calligstrophe.ttf" id="1_yqcqj"]
+[ext_resource type="Texture2D" uid="uid://dmd6xp8g71l84" path="res://assets/art/extra/cone_scoop.png" id="2_8nu7y"]
+[ext_resource type="Texture2D" uid="uid://dh6n3gxhydirk" path="res://assets/art/extra/cone.png" id="3_iek8j"]
+[ext_resource type="AudioStream" uid="uid://bnodjjmrt4wou" path="res://assets/se/IceCreamTruck1.mp3" id="5_4yocy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nj8pi"]
 bg_color = Color(0.50980395, 0.70980394, 0.39607844, 1)
@@ -120,6 +121,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_nj8pi")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_nj8pi")
 theme_override_styles/hover = SubResource("StyleBoxFlat_nj8pi")
 text = "Exit"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1302245840]
+stream = ExtResource("5_4yocy")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_onStartstory_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_startnostory_pressed"]
