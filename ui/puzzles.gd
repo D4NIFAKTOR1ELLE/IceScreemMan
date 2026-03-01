@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var sliding_puzzle = preload("res://game/SlidingPuzzle.tscn")
+@onready var sliding_puzzle = preload("res://game/MinigameSlidingPuzzle.tscn")
 @onready var key_puzzle
 
 var puzzles: Array = [sliding_puzzle, key_puzzle]
