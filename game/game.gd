@@ -19,6 +19,12 @@ func launch_game():
 	Constants.game_instance = self
 	current_flavour_roster.clear()
 	
+	Constants.sanity = Constants.max_sanity
+	truck_inside.sanity_overlay.size.x = 70 * Constants.max_sanity
+	truck_inside.sanity_bar.max_value = Constants.max_sanity
+	truck_inside.sanity_bar.value = Constants.max_sanity
+	truck_inside.sanity_bar.size = truck_inside.sanity_overlay.size 
+	
 	await pick_flavours()
 	
 	gametimer.start()

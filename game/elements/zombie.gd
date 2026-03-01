@@ -36,6 +36,8 @@ func leave_angrily():
 	
 	if Constants.sanity == 0:
 		Constants.game_instance.lose()
+		
+	queue_free()
 
 func leave_happily():
 	dissatisfaction_timer.stop()

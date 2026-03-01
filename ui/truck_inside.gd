@@ -1,6 +1,8 @@
 extends CanvasLayer
 
 @onready var flavours: Array[Button] = []
+@onready var sanity_overlay = $Control/SanityOverlay
+@onready var sanity_bar = $Control/SanityOverlay/ProgressBar
 
 func initialise(flavour_array: Array[String]):
 	var index: int = 0

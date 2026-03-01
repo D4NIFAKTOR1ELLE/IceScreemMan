@@ -65,10 +65,10 @@ one_shot = true
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=1165336007]
 layout_mode = 0
-offset_left = 184.0
-offset_top = 216.0
-offset_right = 185.0
-offset_bottom = 217.0
+offset_left = 9.0
+offset_top = 366.0
+offset_right = 178.0
+offset_bottom = 377.0
 theme_override_styles/background = SubResource("StyleBoxFlat_ioe0b")
 theme_override_styles/fill = SubResource("StyleBoxFlat_tg2ng")
 value = 50.0
