@@ -9,9 +9,10 @@ const scoop_limit: int = 6
 var cone = preload("res://game/elements/Cone.tscn")
 var zombie_preload: PackedScene = preload("res://game/elements/Zombie.tscn")
 
+var sanity: int = 5
 var new_cone: Cone
 var cone_in_hand: bool = false
-var game_instance
+var game_instance: Game
 var puzzles_until_win: int = 3
 
 

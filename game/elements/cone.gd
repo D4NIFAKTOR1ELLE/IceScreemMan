@@ -24,7 +24,6 @@ func add_scoop(flavour: Node):
 	new_scoop.self_modulate = Constants.flavours.get(flavour.name)
 	new_scoop.visible = true
 	flavours_in_scoop.append(flavour.name)
-	print(flavours_in_scoop)
 	$Scoops.add_child(new_scoop)
 	new_scoop.position = Vector2(start_scoop.position.x, get_node("Scoops/%s" % str(scoops - 1)).position.y - 30)
 
@@ -33,7 +32,6 @@ func remove_scoop():
 		delete()
 	
 	flavours_in_scoop.pop_back()
-	print(flavours_in_scoop)
 	
 	get_node("Scoops/%s" % str(scoops)).queue_free()
 	scoops = scoops - 1
@@ -47,4 +45,5 @@ func delete():
 		remove_scoop()
 	else:
 		flavours_in_scoop.clear()
+		Constants.cone_in_hand = false
 		self.queue_free()

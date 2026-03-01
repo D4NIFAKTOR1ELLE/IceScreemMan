@@ -1,5 +1,7 @@
 extends Node
 
+class_name Game
+
 @onready var gametimer: Timer = $GameTimer
 @onready var zombietimer: Timer = $ZombieTimer
 
@@ -36,10 +38,11 @@ func win():
 	print("You won!")
 
 func lose():
+	gametimer.stop()
 	print("🤣🤣🤣🫵🫵🫵🫵")
 
 func _on_game_timer_timeout() -> void:
-	lose()
+	win()
 
 func _on_zombie_timer_timeout() -> void:
 	zombie_window.spawn_zombie()
