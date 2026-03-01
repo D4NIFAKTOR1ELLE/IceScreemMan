@@ -4,8 +4,6 @@
 
 [node name="FuseMinigame" type="Node2D" unique_id=1059799517]
 script = ExtResource("1_357ut")
-NUM_SLOTS = 10
-GRID_COLS = 2
 
 [node name="Background" type="ColorRect" parent="." unique_id=1727271176]
 anchors_preset = 15
