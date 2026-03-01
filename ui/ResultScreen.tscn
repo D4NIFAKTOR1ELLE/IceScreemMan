@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://bebxnfodv5cp8"]
+
+[ext_resource type="Texture2D" uid="uid://cvlbjilhixub" path="res://assets/art/extra/sanity_box.png" id="1_rte7b"]
+
+[node name="StartScreen" type="Control" unique_id=2071207771]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1847300891]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect" unique_id=1429823910]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer" unique_id=726408618]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=680315015]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2115114453]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_rte7b")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1145075838]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 28
+text = "SANITY"
+vertical_alignment = 1
+
+[node name="Score" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1758974375]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 28
+text = "0/5"
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=583035490]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1240439933]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_rte7b")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1601292482]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 28
+text = "TIME LEFT"
+vertical_alignment = 1
+
+[node name="Score" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1864122503]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 28
+text = "00:00"
+vertical_alignment = 1
