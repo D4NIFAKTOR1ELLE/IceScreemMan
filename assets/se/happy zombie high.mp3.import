@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cvijsrwcp6h6p"
+path="res://.godot/imported/happy zombie high.mp3-04e0fa7457c02ec4e004acf97baffdab.mp3str"
+
+[deps]
+
+source_file="res://assets/se/happy zombie high.mp3"
+dest_files=["res://.godot/imported/happy zombie high.mp3-04e0fa7457c02ec4e004acf97baffdab.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
