@@ -21,7 +21,7 @@ var flavours: Dictionary = {
 	"Pickles": Color.LIGHT_GREEN,
 	"Bull Red": Color.LIGHT_CORAL,
 	"Vanilla": Color.ANTIQUE_WHITE,
-	"Hazelnut": Color.ROSY_BROWN,
+	"Hazelnut": Color.BURLYWOOD,
 	"Caramel Squirrel": Color.SADDLE_BROWN,
 	"Lemon Drop": Color.YELLOW,
 	"Red Blueberry": Color.ORANGE_RED,

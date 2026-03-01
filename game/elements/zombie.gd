@@ -6,6 +6,9 @@ extends Control
 @onready var dissatisfaction_timer: Timer = $DissatisfactionTimer
 @onready var request_scoop: TextureRect = $RequestBubble/Requests/RequestScoop
 @onready var requests: GridContainer = $RequestBubble/Requests
+@onready var progress_bar: ProgressBar = $ProgressBar
+
+signal left
 
 var zombies: Array[String] = [
 	"res://assets/art/zombies/zombieBoy.png",
@@ -30,12 +33,16 @@ func spawn():
 		new_request_scoop.visible = true
 	
 	dissatisfaction_timer.start()
+	update_progress()
 
 func leave_angrily():
 	Constants.sanity = Constants.sanity - 1
+	Constants.game_instance.truck_inside.sanity_bar.value -= 1
 	
 	if Constants.sanity == 0:
 		Constants.game_instance.lose()
+		
+	left.emit()
 		
 	queue_free()
 
@@ -44,7 +51,16 @@ func leave_happily():
 	Constants.cone_in_hand = false
 	Constants.new_cone.queue_free()
 	
+	left.emit()
+	
 	queue_free()
+
+func update_progress():
+	progress_bar.show()
+	progress_bar.max_value = dissatisfaction_timer.wait_time
+	progress_bar.value = 0
+	var tween = progress_bar.create_tween()
+	tween.tween_property(progress_bar, "value", progress_bar.max_value, dissatisfaction_timer.wait_time)
 
 func _on_dissatisfaction_timer_timeout() -> void:
 	leave_angrily()

@@ -36,7 +36,6 @@ func pick_flavours():
 	for i in range(6):
 		current_flavour_roster.append(flavours.pop_back())
 	
-	print(current_flavour_roster)
 	truck_inside.initialise(current_flavour_roster)
 
 func win():
@@ -45,6 +44,7 @@ func win():
 
 func lose():
 	gametimer.stop()
+	zombietimer.stop()
 	print("🤣🤣🤣🫵🫵🫵🫵")
 
 func _on_game_timer_timeout() -> void:

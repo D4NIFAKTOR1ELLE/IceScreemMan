@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var zombie_container: HBoxContainer = $Zombies
+@onready var zombie_container: Container = $Zombies
 
 var zombie_amount: int = 0
 
@@ -9,6 +9,11 @@ func spawn_zombie():
 		return
 	
 	var new_zombie = Constants.zombie_preload.instantiate()
+	new_zombie.left.connect(_on_zombie_left)
 	
 	zombie_amount = zombie_amount + 1
 	zombie_container.add_child(new_zombie)
+
+func _on_zombie_left():
+	zombie_amount -= 1
+	print(zombie_amount)
