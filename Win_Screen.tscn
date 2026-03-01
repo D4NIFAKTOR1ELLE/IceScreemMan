@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dmxwa3u3arytf"]
+
+[ext_resource type="Texture2D" uid="uid://63pifr73vtus" path="res://assets/art/Placeholder/TempWinScreen.png" id="1_wnjqc"]
+[ext_resource type="FontFile" uid="uid://c0e4wih8f2tt0" path="res://assets/fonts/calligtastrophe/Calligstrophe.ttf" id="2_e3d0f"]
+
+[node name="LooseScreen" type="Control" unique_id=1792275582]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=107221160]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1222790980]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wnjqc")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Panel" unique_id=2029802444]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -493.0
+offset_top = -236.0
+offset_right = -227.0
+offset_bottom = -149.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/icon_hover_color = Color(1, 0.4745098, 1, 1)
+theme_override_fonts/font = ExtResource("2_e3d0f")
+theme_override_font_sizes/font_size = 48
+text = "Main Menu"
