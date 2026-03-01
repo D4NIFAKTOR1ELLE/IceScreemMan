@@ -27,10 +27,8 @@ func attempt_strike():
 	return 
 
 func _on_spawn_timer_timeout():
-	var holes = get_tree().get_nodes_in_group("holes")
-	if holes.size() > 0:
-		var random_hole = holes[randi() % holes.size()]
-		random_hole.spawn_zombie()
+	var random_hole = holes[randi() % holes.size()]
+	random_hole.spawn_zombie()
 
 func win_game():
 	spawn_timer.stop()

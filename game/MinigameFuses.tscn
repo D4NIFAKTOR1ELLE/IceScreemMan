@@ -21,13 +21,10 @@ offset_bottom = 256.0
 [node name="FuseHolder" type="Node2D" parent="." unique_id=967381914]
 
 [node name="WinLabel" type="Label" parent="." unique_id=936906678]
-visible = false
-offset_left = 344.0
-offset_top = 248.0
-offset_right = 744.0
-offset_bottom = 328.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 83.0
+offset_top = 267.0
+offset_right = 483.0
+offset_bottom = 347.0
 theme_override_colors/font_color = Color(0.3, 1, 0.4, 1)
 theme_override_font_sizes/font_size = 28
 text = "✔  All fuses correct!"
@@ -36,10 +33,10 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="." unique_id=1200473965]
-offset_left = 480.0
-offset_top = 576.0
-offset_right = 560.0
-offset_bottom = 616.0
+offset_left = 240.0
+offset_top = 520.0
+offset_right = 320.0
+offset_bottom = 560.0
 text = "test"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

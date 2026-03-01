@@ -34,7 +34,7 @@ func handle_hit():
 			zombie.texture = whacked_texture 
 		retreat()
 		
-func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event.is_action_pressed("left_click"):
 		handle_hit()
 		whacked.emit()
