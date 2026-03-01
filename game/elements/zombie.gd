@@ -36,8 +36,8 @@ func spawn():
 		requests.add_child(new_request_scoop)
 		new_request_scoop.visible = true
 	
-	dissatisfaction_timer.start()
 	update_progress()
+	dissatisfaction_timer.start()
 
 func leave_angrily():
 	Constants.sanity = Constants.sanity - 1

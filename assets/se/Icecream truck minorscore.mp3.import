@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djd567qxfpi2h"
+path="res://.godot/imported/Icecream truck minorscore.mp3-b63bc883d6af3eae9c11a2646e01ef39.mp3str"
+
+[deps]
+
+source_file="res://assets/se/Icecream truck minorscore.mp3"
+dest_files=["res://.godot/imported/Icecream truck minorscore.mp3-b63bc883d6af3eae9c11a2646e01ef39.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

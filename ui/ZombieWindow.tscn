@@ -20,6 +20,6 @@ anchor_right = 0.48524305
 anchor_bottom = 0.5015432
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/h_separation = 170
+theme_override_constants/h_separation = 180
 columns = 3
 metadata/_edit_use_anchors_ = true

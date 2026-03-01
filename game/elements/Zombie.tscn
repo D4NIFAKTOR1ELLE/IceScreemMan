@@ -248,7 +248,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="DissatisfactionTimer" type="Timer" parent="." unique_id=130927282]
-wait_time = 20.0
+wait_time = 10.0
 one_shot = true
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=1165336007]
@@ -268,3 +268,4 @@ show_percentage = false
 libraries/ = SubResource("AnimationLibrary_0wwwm")
 
 [connection signal="mouse_entered" from="Body" to="." method="_on_body_mouse_entered"]
+[connection signal="timeout" from="DissatisfactionTimer" to="." method="_on_dissatisfaction_timer_timeout"]
