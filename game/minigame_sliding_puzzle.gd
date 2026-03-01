@@ -29,10 +29,10 @@ func _on_tile_pressed(clicked_tile: TextureButton):
 			win()
 
 func is_adjacent(idx1: int, idx2: int) -> bool:
-	var row1 = idx1 / 3
-	var col1 = idx1 % 3
-	var row2 = idx2 / 3
-	var col2 = idx2 % 3
+	var row1: int = int(idx1 / floor(3))
+	var col1: int = int(idx1 % 3)
+	var row2: int = int(idx2 / floor(3))
+	var col2: int = int(idx2 % 3)
 	return (abs(row1 - row2) + abs(col1 - col2)) == 1
 
 func swap_tiles(idx1: int, idx2: int):

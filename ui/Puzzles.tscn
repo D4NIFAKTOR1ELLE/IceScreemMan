@@ -3,4 +3,11 @@
 [ext_resource type="Script" uid="uid://iqbm7f8r7wsx" path="res://ui/puzzles.gd" id="1_24mw7"]
 
 [node name="Puzzles" type="CanvasLayer" unique_id=2122768542]
+layer = 3
 script = ExtResource("1_24mw7")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1810880516]
+offset_left = 495.0
+offset_top = 41.0
+offset_right = 1112.0
+offset_bottom = 608.0

@@ -34,8 +34,6 @@ func _ready():
 	win_label.hide()
 	slot_grid.columns = GRID_COLS
 	_spawn_slots()
-	await get_tree().process_frame
-	await get_tree().process_frame
 	_spawn_fuses()
 
 
@@ -74,6 +72,7 @@ func _spawn_fuses():
 		var row = i % max_rows
 		var pos = Vector2(right_x - col * (FUSE_SIZE.x + 12.0), 30.0 + row * spacing)
 		var fuse = _make_fuse(values[i], pos)
+
 		fuse_holder.add_child(fuse)
 		fuses.append(fuse)
 
@@ -81,6 +80,7 @@ func _spawn_fuses():
 func _make_fuse(value, pos):
 	var fuse = Area2D.new()
 	fuse.set_meta("value", value)
+
 	fuse.position = pos
 
 	var cs = CollisionShape2D.new()
@@ -176,7 +176,6 @@ func _format_value(v):
 	if v == int(v):
 		return str(int(v)) + "A"
 	return str(v) + "A"
-
 
 func _on_button_pressed() -> void:
 	get_tree().root.add_child(simultaneous_scene)

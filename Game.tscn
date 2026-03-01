@@ -13,7 +13,6 @@ script = ExtResource("1_xkndl")
 [node name="TruckInside" parent="." unique_id=360068417 instance=ExtResource("1_wbfu4")]
 
 [node name="Puzzles" parent="." unique_id=2122768542 instance=ExtResource("3_u44n3")]
-visible = false
 
 [node name="GameTimer" type="Timer" parent="." unique_id=1234729530]
 wait_time = 240.0

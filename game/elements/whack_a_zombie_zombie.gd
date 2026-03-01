@@ -1,6 +1,5 @@
 extends Area2D
 
-
 @onready var anim = $AnimationPlayer
 @onready var zombie = $ZombieHoleSprite/ZombieSprite
 
@@ -9,6 +8,8 @@ extends Area2D
 
 var is_vulnerable = false
 var is_whacked = false
+
+signal whacked
 
 func spawn_zombie():
 	if is_vulnerable or is_whacked: return
@@ -26,11 +27,15 @@ func retreat():
 	is_vulnerable = false
 	is_whacked = false
 
-
 func handle_hit():
 	if is_vulnerable and not is_whacked:
 		is_whacked = true
 		if whacked_texture:
 			zombie.texture = whacked_texture 
 		retreat()
+		
+func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event.is_action_pressed("left_click"):
+		handle_hit()
+		whacked.emit()
 		

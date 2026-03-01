@@ -1,20 +1,31 @@
 extends CanvasLayer
 
 @onready var sliding_puzzle = preload("res://game/MinigameSlidingPuzzle.tscn")
-@onready var key_puzzle
+@onready var fuse_puzzle = preload("res://game/MinigameFuses.tscn")
+@onready var whack_a_mole_puzzle = preload("res://game/MinigameWhackAMole.tscn")
+@onready var panel: PanelContainer = $PanelContainer
 
-var puzzles: Array = [sliding_puzzle, key_puzzle]
+var puzzles: Array
 var current_puzzle: Node = null
 
 func initialise():
+	puzzles = [sliding_puzzle, fuse_puzzle, whack_a_mole_puzzle]
 	puzzles.shuffle()
 	
+	choose()
+	
 func choose():
-	#TODO Replace pick_random with an index from 1 to 3 or any number
-	current_puzzle = puzzles.pick_random()
+	current_puzzle = puzzles.pop_back().instantiate()
+	current_puzzle.puzzle_solved.connect(on_puzzle_beaten)
+	
+	panel.add_child(current_puzzle)
 	
 func on_puzzle_beaten():
 	Constants.puzzles_until_win -= 1
 	
 	if Constants.puzzles_until_win == 0:
 		Constants.game_instance.win()
+
+	current_puzzle.queue_free()
+
+	choose()

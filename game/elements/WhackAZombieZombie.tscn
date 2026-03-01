@@ -77,3 +77,5 @@ texture = ExtResource("2_1rrj4")
 libraries/ = SubResource("AnimationLibrary_0hmpx")
 
 [node name="Timer" type="Timer" parent="." unique_id=2093161790]
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

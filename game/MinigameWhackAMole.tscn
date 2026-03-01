@@ -16,26 +16,28 @@ theme_override_colors/font_color = Color(0.87, 0, 0, 1)
 text = "X"
 metadata/_edit_use_anchors_ = true
 
-[node name="WhackAZombieZombie" parent="." unique_id=793144184 groups=["holes"] instance=ExtResource("2_fx3an")]
-position = Vector2(232, 168)
+[node name="Node" type="Node" parent="." unique_id=526969367]
 
-[node name="WhackAZombieZombie2" parent="." unique_id=896822770 groups=["holes"] instance=ExtResource("2_fx3an")]
+[node name="WhackAZombieZombie2" parent="Node" unique_id=896822770 groups=["holes"] instance=ExtResource("2_fx3an")]
 position = Vector2(848, 200)
 
-[node name="WhackAZombieZombie3" parent="." unique_id=987988660 groups=["holes"] instance=ExtResource("2_fx3an")]
+[node name="WhackAZombieZombie3" parent="Node" unique_id=987988660 groups=["holes"] instance=ExtResource("2_fx3an")]
 position = Vector2(136, 472)
 
-[node name="WhackAZombieZombie4" parent="." unique_id=1532061917 groups=["holes"] instance=ExtResource("2_fx3an")]
+[node name="WhackAZombieZombie4" parent="Node" unique_id=1532061917 groups=["holes"] instance=ExtResource("2_fx3an")]
 position = Vector2(536, 152)
 
-[node name="WhackAZombieZombie5" parent="." unique_id=1058025865 groups=["holes"] instance=ExtResource("2_fx3an")]
+[node name="WhackAZombieZombie5" parent="Node" unique_id=1058025865 groups=["holes"] instance=ExtResource("2_fx3an")]
 position = Vector2(442, 544)
 
-[node name="WhackAZombieZombie6" parent="." unique_id=228364504 groups=["holes"] instance=ExtResource("2_fx3an")]
+[node name="WhackAZombieZombie6" parent="Node" unique_id=228364504 groups=["holes"] instance=ExtResource("2_fx3an")]
 position = Vector2(648, 448)
 
-[node name="WhackAZombieZombie7" parent="." unique_id=1245510654 groups=["holes"] instance=ExtResource("2_fx3an")]
+[node name="WhackAZombieZombie7" parent="Node" unique_id=1245510654 groups=["holes"] instance=ExtResource("2_fx3an")]
 position = Vector2(904, 528)
+
+[node name="WhackAZombieZombie" parent="Node" unique_id=793144184 groups=["holes"] instance=ExtResource("2_fx3an")]
+position = Vector2(232, 168)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=528618478]
 offset_left = -8.0
