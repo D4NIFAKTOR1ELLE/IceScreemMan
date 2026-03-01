@@ -7,7 +7,7 @@ func _onStartstory_button_pressed() -> void:
 func _on_startnostory_pressed() -> void:
 	Game.launch_game()
 	
-	self.queue_free()
+	queue_free()
 
 
 func _on_exit_pressed() -> void:

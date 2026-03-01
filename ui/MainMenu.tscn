@@ -23,17 +23,10 @@ corner_radius_bottom_left = 16
 shadow_size = 12
 shadow_offset = Vector2(0, 0.6)
 
-[node name="MainMenu" type="Control" unique_id=1471570043]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="MainMenu" type="CanvasLayer" unique_id=1528624902]
 script = ExtResource("1_iek8j")
 
 [node name="Panel" type="Panel" parent="." unique_id=1970971753]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -71,7 +64,6 @@ text = "Ice Scream by Moonlight"
 horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=72500613]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -108,5 +100,5 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_nj8pi")
 theme_override_styles/hover = SubResource("StyleBoxFlat_nj8pi")
 text = "Exit"
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_onStartstory_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_startnostory_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
