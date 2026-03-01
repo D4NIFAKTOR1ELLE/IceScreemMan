@@ -120,7 +120,7 @@ func _input(event):
 func _try_grab(mouse_pos):
 	for i in range(fuses.size() - 1, -1, -1):
 		var fuse = fuses[i]
-		var fuse_rect = Rect2(fuse.position - FUSE_SIZE / 2.0, FUSE_SIZE)
+		var fuse_rect = Rect2(fuse.global_position - FUSE_SIZE / 2.0, FUSE_SIZE)
 		if fuse_rect.has_point(mouse_pos):
 			dragged_fuse = fuse
 			drag_offset = fuse.position - mouse_pos
@@ -140,7 +140,7 @@ func _try_drop():
 
 	var best_slot = null
 	var best_overlap = 0.0
-	var fuse_rect = Rect2(dragged_fuse.position - FUSE_SIZE / 2.0, FUSE_SIZE)
+	var fuse_rect = Rect2(dragged_fuse.global_position - FUSE_SIZE / 2.0, FUSE_SIZE)
 
 	for slot in slots:
 		if slot_to_fuse.has(slot):
@@ -153,7 +153,7 @@ func _try_drop():
 			best_slot = slot
 
 	if best_slot != null and best_overlap > 0.0:
-		dragged_fuse.position = best_slot.global_position + FUSE_SIZE / 2.0
+		dragged_fuse.global_position = best_slot.global_position + FUSE_SIZE / 2.0
 		slot_to_fuse[best_slot] = dragged_fuse
 		fuse_to_slot[dragged_fuse] = best_slot
 		_check_win()

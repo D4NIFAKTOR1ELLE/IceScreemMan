@@ -10,7 +10,7 @@ var current_puzzle: Node = null
 
 func initialise():
 	puzzles = [sliding_puzzle, whack_a_mole_puzzle, fuse_puzzle]
-	#puzzles.shuffle()
+	puzzles.shuffle()
 	
 	choose()
 	
