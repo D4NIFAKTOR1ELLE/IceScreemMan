@@ -7,6 +7,7 @@ extends Control
 @onready var request_scoop: TextureRect = $RequestBubble/Requests/RequestScoop
 @onready var requests: GridContainer = $RequestBubble/Requests
 @onready var progress_bar: ProgressBar = $ProgressBar
+@onready var animationplayer: AnimationPlayer = $AnimationPlayer
 
 signal left
 
@@ -20,7 +21,8 @@ var zombies: Array[String] = [
 
 func _ready() -> void:
 	body.texture = load(zombies[randi_range(0, zombies.size() - 1)])
-	body.visible = true
+	
+	animationplayer.play("spawn")
 	
 	spawn()
 

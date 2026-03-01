@@ -26,5 +26,7 @@ func _on_flavour_pressed(flavour_name: Node):
 func _on_cone_button_pressed() -> void:
 	Constants.new_cone = Constants.cone.instantiate()
 
-	$Control.add_child.call_deferred(Constants.new_cone)
+	$Control.add_child(Constants.new_cone)
+	
+	Constants.new_cone.initialise()
 	Constants.cone_in_hand = true
