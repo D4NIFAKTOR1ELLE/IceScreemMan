@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cbhgcccaqjmh2" path="res://game/elements/zombie.gd" id="1_ioe0b"]
 [ext_resource type="Texture2D" uid="uid://cnpfhpr5o01cn" path="res://assets/art/extra/scoop.png" id="2_tg2ng"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ioe0b"]
+[ext_resource type="Texture2D" uid="uid://dkh8n5bum4wq2" path="res://assets/art/zombies/mandela1.png" id="2_w1o8s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ioe0b"]
 bg_color = Color(0.05197096, 0.051970966, 0.051970914, 1)
@@ -25,11 +24,11 @@ metadata/_edit_use_anchors_ = true
 [node name="Body" type="TextureRect" parent="." unique_id=220306732]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.016260162
-anchor_top = 0.43418014
-anchor_right = 1.1707318
-anchor_bottom = 1.4318707
-texture = SubResource("PlaceholderTexture2D_ioe0b")
+anchor_left = -0.029810298
+anchor_top = 0.40415704
+anchor_right = 0.6097561
+anchor_bottom = 1.4018476
+texture = ExtResource("2_w1o8s")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_use_anchors_ = true
