@@ -2,8 +2,6 @@ extends CanvasLayer
 
 @onready var flavours: Array[Button] = []
 
-var new_cone
-
 func initialise(flavour_array: Array[String]):
 	var index: int = 0
 	
@@ -20,7 +18,6 @@ func _on_ignition_pressed() -> void:
 	pass # Replace with function body.
 
 func _on_flavour_pressed(flavour_name: Node):
-	print(Constants.new_cone)
 	if Constants.new_cone:
 		Constants.new_cone.add_scoop(Constants.flavours.get(flavour_name.name))
 

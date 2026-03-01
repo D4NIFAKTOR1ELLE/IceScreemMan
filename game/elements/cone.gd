@@ -12,13 +12,15 @@ func _physics_process(_delta: float) -> void:
 	global_position = get_global_mouse_position()
 
 func add_scoop(colour: Color):
+	if scoops == 6:
+		return
 	scoops = scoops + 1
 	var new_scoop = start_scoop.duplicate()
+	new_scoop.name = str(scoops + 1)
 	
-	new_scoop.position = Vector2(start_scoop.position.x, get_node("Scoops/%s" % scoops).position.y)
 	new_scoop.self_modulate = colour
 	$Scoops.add_child(new_scoop)
-	print(new_scoop.name)
+	new_scoop.position = Vector2(start_scoop.position.x, get_node("Scoops/%s" % scoops).position.y - 30)
 
 func remove_scoop():
 	if scoops == 0:

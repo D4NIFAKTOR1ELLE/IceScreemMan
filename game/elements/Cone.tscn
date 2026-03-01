@@ -15,6 +15,7 @@ pivot_offset_ratio = Vector2(50, 50)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
+mouse_behavior_recursive = 1
 script = ExtResource("1_kvamh")
 
 [node name="Waffle" type="TextureRect" parent="." unique_id=2131034421]
