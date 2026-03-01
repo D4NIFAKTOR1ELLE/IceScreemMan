@@ -22,7 +22,7 @@ func spawn_zombie():
 
 func retreat():
 	anim.play_backwards("PopUp")
-	await anim.animation_finished
+	await get_tree().create_timer(0.5).timeout
 	is_vulnerable = false
 	is_whacked = false
 
