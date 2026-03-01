@@ -7,8 +7,8 @@ class_name Cone
 var scoops: int = 0
 var flavours_in_scoop: Array[String] = []
 
-func initialise():
-	set_physics_process(true)
+func initialise():	
+	$Waffle.visible = true
 	
 func _physics_process(_delta: float) -> void:
 	global_position = get_global_mouse_position()

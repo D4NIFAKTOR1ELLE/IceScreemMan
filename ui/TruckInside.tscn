@@ -3,8 +3,14 @@
 [ext_resource type="Theme" uid="uid://on8hmefb85mk" path="res://ui/TruckTheme.tres" id="1_2orec"]
 [ext_resource type="Script" uid="uid://u656pi8oxcjm" path="res://ui/truck_inside.gd" id="1_kba1j"]
 [ext_resource type="Texture2D" uid="uid://btjjqxolgokax" path="res://assets/art/extra/ice_cream_container.png" id="3_mb3o5"]
+[ext_resource type="Texture2D" uid="uid://cvlbjilhixub" path="res://assets/art/extra/sanity_box.png" id="3_xp5ev"]
 
 [sub_resource type="Theme" id="Theme_kba1j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mb3o5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xp5ev"]
+bg_color = Color(0.9678531, 0.5758627, 0.59350264, 1)
 
 [node name="TruckInside" type="CanvasLayer" unique_id=360068417]
 script = ExtResource("1_kba1j")
@@ -39,14 +45,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Sanity" type="Label" parent="Control" unique_id=2048519722]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5347222
-anchor_top = 0.040059347
-anchor_right = 0.6909722
-anchor_bottom = 0.099406525
-offset_left = 1.0
-offset_top = 17.0
-offset_right = 1.0
-offset_bottom = 17.0
+anchor_left = 0.5355903
+anchor_top = 0.0652819
+anchor_right = 0.6918403
+anchor_bottom = 0.12462908
 theme = SubResource("Theme_kba1j")
 text = "Sanity"
 metadata/_edit_use_anchors_ = true
@@ -54,44 +56,48 @@ metadata/_edit_use_anchors_ = true
 [node name="TimeButton" type="Label" parent="Control" unique_id=1309789169]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5373264
-anchor_top = 0.24183977
-anchor_right = 0.6050347
-anchor_bottom = 0.2967359
+anchor_left = 0.5355903
+anchor_top = 0.25074184
+anchor_right = 0.6032986
+anchor_bottom = 0.305638
 text = "Time"
 metadata/_edit_use_anchors_ = true
 
 [node name="Time" type="Label" parent="Control" unique_id=1147665987]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.01447916
-anchor_top = 0.08005936
-anchor_right = 0.04947922
-anchor_bottom = 0.11505935
-offset_left = 630.32
-offset_top = 157.04
-offset_right = 695.92
-offset_bottom = 191.64
+anchor_left = 0.5668403
+anchor_top = 0.32344213
+anchor_right = 0.65878475
+anchor_bottom = 0.40977746
 theme = ExtResource("1_2orec")
+theme_override_font_sizes/font_size = 41
 text = "00:00"
 metadata/_edit_use_anchors_ = true
 
-[node name="ProgressBar" type="ProgressBar" parent="Control" unique_id=414322818]
+[node name="SanityOverlay" type="TextureRect" parent="Control" unique_id=1427271080]
+clip_children = 2
+clip_contents = true
 layout_mode = 0
-offset_left = 659.0
-offset_top = 96.0
-offset_right = 1060.0
-offset_bottom = 139.0
-max_value = 5.0
-step = 1.0
-show_percentage = false
+offset_left = 670.0
+offset_top = 92.0
+offset_right = 1092.0
+offset_bottom = 144.0
+texture = ExtResource("3_xp5ev")
+stretch_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1427271080]
+[node name="ProgressBar" type="ProgressBar" parent="Control/SanityOverlay" unique_id=414322818]
 layout_mode = 0
-offset_left = 632.0
-offset_top = 84.0
-offset_right = 1102.0
-offset_bottom = 139.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 412.0
+offset_bottom = 47.0
+theme_override_styles/background = SubResource("StyleBoxFlat_mb3o5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xp5ev")
+max_value = 6.0
+step = 1.0
+value = 3.0
+show_percentage = false
 
 [node name="Flavours" type="GridContainer" parent="Control" unique_id=1129066676]
 layout_mode = 1
