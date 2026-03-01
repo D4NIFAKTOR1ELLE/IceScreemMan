@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://cxm1oem6unq2m"]
 
 [ext_resource type="Script" uid="uid://cbhgcccaqjmh2" path="res://game/elements/zombie.gd" id="1_ioe0b"]
+[ext_resource type="Texture2D" uid="uid://cnpfhpr5o01cn" path="res://assets/art/extra/scoop.png" id="2_tg2ng"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ioe0b"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tg2ng"]
-size = Vector2(40, 40)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ioe0b"]
 bg_color = Color(0.05197096, 0.051970966, 0.051970914, 1)
@@ -49,8 +47,8 @@ size_flags_vertical = 3
 layout_mode = 0
 offset_left = 6.0
 offset_top = 6.0
-offset_right = 134.0
-offset_bottom = 90.0
+offset_right = 165.0
+offset_bottom = 97.0
 columns = 3
 
 [node name="RequestScoop" type="TextureRect" parent="RequestBubble/Requests" unique_id=1434150639]
@@ -58,8 +56,9 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = SubResource("PlaceholderTexture2D_tg2ng")
-stretch_mode = 2
+texture = ExtResource("2_tg2ng")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="DissatisfactionTimer" type="Timer" parent="." unique_id=130927282]
 wait_time = 20.0

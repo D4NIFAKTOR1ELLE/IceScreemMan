@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://nracvaq6653c"]
 
 [ext_resource type="Script" uid="uid://sthrie7rn5sf" path="res://game/elements/cone.gd" id="1_kvamh"]
+[ext_resource type="Texture2D" uid="uid://dh6n3gxhydirk" path="res://assets/art/extra/cone.png" id="2_m1nd6"]
 [ext_resource type="PackedScene" uid="uid://p07enkwwxok4" path="res://game/elements/Scoop.tscn" id="2_xqco8"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_shjki"]
+[ext_resource type="Texture2D" uid="uid://dmd6xp8g71l84" path="res://assets/art/extra/cone_scoop.png" id="4_m1nd6"]
 
 [node name="Cone" type="Control" unique_id=846486343]
 layout_mode = 3
@@ -21,9 +21,9 @@ script = ExtResource("1_kvamh")
 layout_mode = 0
 offset_left = -49.0
 offset_top = -59.0
-offset_right = 42.0
-offset_bottom = 77.0
-texture = SubResource("PlaceholderTexture2D_shjki")
+offset_right = 41.0
+offset_bottom = 71.0
+texture = ExtResource("2_m1nd6")
 
 [node name="Scoops" type="Control" parent="." unique_id=1945018035]
 anchors_preset = 0
@@ -35,13 +35,15 @@ mouse_filter = 2
 
 [node name="0" parent="Scoops" unique_id=1714493307 instance=ExtResource("2_xqco8")]
 visible = false
-layout_mode = 0
-anchor_left = 0.014084507
-anchor_top = 0.68372095
-anchor_right = 0.9859155
-anchor_bottom = 0.9953488
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.15492958
+anchor_top = 0.6372093
+anchor_right = 1.2535211
+anchor_bottom = 1.1023256
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
+texture = ExtResource("4_m1nd6")
 metadata/_edit_use_anchors_ = true
