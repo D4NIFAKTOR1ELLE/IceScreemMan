@@ -2,6 +2,10 @@
 
 [ext_resource type="Theme" uid="uid://on8hmefb85mk" path="res://ui/TruckTheme.tres" id="1_2orec"]
 [ext_resource type="Script" uid="uid://u656pi8oxcjm" path="res://ui/truck_inside.gd" id="1_kba1j"]
+<<<<<<< Updated upstream
+=======
+[ext_resource type="PackedScene" uid="uid://k1epd3r2uous" path="res://game/MinigameSlidingPuzzle.tscn" id="3_mb3o5"]
+>>>>>>> Stashed changes
 
 [sub_resource type="Theme" id="Theme_kba1j"]
 

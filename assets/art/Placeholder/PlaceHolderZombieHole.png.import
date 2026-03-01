@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v8johxxfmn50"
-path="res://.godot/imported/number-2.png-e481181ab7008bb7e062b58b15faca84.ctex"
+uid="uid://dt7hq3tfpvrem"
+path="res://.godot/imported/PlaceHolderZombieHole.png-509e2e510f3ac42786fe76efef40cb79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/number-2.png"
-dest_files=["res://.godot/imported/number-2.png-e481181ab7008bb7e062b58b15faca84.ctex"]
+source_file="res://assets/art/Placeholder/PlaceHolderZombieHole.png"
+dest_files=["res://.godot/imported/PlaceHolderZombieHole.png-509e2e510f3ac42786fe76efef40cb79.ctex"]
 
 [params]
 

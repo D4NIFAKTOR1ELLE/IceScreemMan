@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi3h0v16r2py1"
-path="res://.godot/imported/number-four.png-b9fd56a701dc6bd28112f3d7db3cde76.ctex"
+uid="uid://cyds4l7vrhv2w"
+path="res://.godot/imported/PlaceHolderNumber5.png-35486be0b114c84fcb6a3a329bc0fc74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/number-four.png"
-dest_files=["res://.godot/imported/number-four.png-b9fd56a701dc6bd28112f3d7db3cde76.ctex"]
+source_file="res://assets/art/Placeholder/PlaceHolderNumber5.png"
+dest_files=["res://.godot/imported/PlaceHolderNumber5.png-35486be0b114c84fcb6a3a329bc0fc74.ctex"]
 
 [params]
 

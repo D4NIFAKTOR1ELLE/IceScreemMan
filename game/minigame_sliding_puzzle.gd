@@ -26,7 +26,7 @@ func _on_tile_pressed(clicked_tile: TextureButton):
 	if is_adjacent(clicked_idx, empty_idx):
 		swap_tiles(clicked_idx, empty_idx)
 		if check_win():
-			win_sequence()
+			win()
 
 func is_adjacent(idx1: int, idx2: int) -> bool:
 	var row1 = idx1 / 3
@@ -69,6 +69,6 @@ func check_win() -> bool:
 			return false
 	return true
 
-func win_sequence():
+func win():
 	puzzle_solved.emit()
 	print("win")

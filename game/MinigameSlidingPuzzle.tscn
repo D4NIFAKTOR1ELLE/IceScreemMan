@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://k1epd3r2uous"]
 
-[ext_resource type="Script" path="res://game/sliding_puzzle.gd" id="1_eo3s4"]
-[ext_resource type="Texture2D" uid="uid://dpog3hem55nxe" path="res://assets/art/number-one.png" id="2_nho4l"]
-[ext_resource type="Texture2D" uid="uid://v8johxxfmn50" path="res://assets/art/number-2.png" id="3_4ffmw"]
-[ext_resource type="Texture2D" uid="uid://cww04v68pyhs6" path="res://assets/art/number-3.png" id="4_b3gjb"]
-[ext_resource type="Texture2D" uid="uid://bi3h0v16r2py1" path="res://assets/art/number-four.png" id="5_5fprm"]
-[ext_resource type="Texture2D" uid="uid://cyds4l7vrhv2w" path="res://assets/art/number-5.png" id="6_ltv2e"]
-[ext_resource type="Texture2D" uid="uid://bjepwihtcx1ti" path="res://assets/art/six.png" id="7_60bih"]
-[ext_resource type="Texture2D" uid="uid://4xvnkqrwcg8w" path="res://assets/art/seven.png" id="8_asc4g"]
-[ext_resource type="Texture2D" uid="uid://brret4eovargp" path="res://assets/art/number-8.png" id="9_0f6sn"]
+[ext_resource type="Script" uid="uid://b8et58lm1waa8" path="res://game/minigame_sliding_puzzle.gd" id="1_vqdnr"]
+[ext_resource type="Texture2D" uid="uid://dpog3hem55nxe" path="res://assets/art/Placeholder/PlaceHolderNumber1.png" id="2_duces"]
+[ext_resource type="Texture2D" uid="uid://v8johxxfmn50" path="res://assets/art/Placeholder/PlaceHolderNumber2.png" id="3_4chig"]
+[ext_resource type="Texture2D" uid="uid://cww04v68pyhs6" path="res://assets/art/Placeholder/PlaceHolderNumber3.png" id="4_bbgfj"]
+[ext_resource type="Texture2D" uid="uid://bi3h0v16r2py1" path="res://assets/art/Placeholder/PlaceHolderNumber4.png" id="5_64eea"]
+[ext_resource type="Texture2D" uid="uid://cyds4l7vrhv2w" path="res://assets/art/Placeholder/PlaceHolderNumber5.png" id="6_mnju7"]
+[ext_resource type="Texture2D" uid="uid://bjepwihtcx1ti" path="res://assets/art/Placeholder/PlaceHolderNumber6.png" id="7_qk2lg"]
+[ext_resource type="Texture2D" uid="uid://4xvnkqrwcg8w" path="res://assets/art/Placeholder/PlaceHolderNumber7.png" id="8_bsyi4"]
+[ext_resource type="Texture2D" uid="uid://brret4eovargp" path="res://assets/art/Placeholder/PlaceHolderNumber8.png" id="9_co0gt"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8b1d2"]
 
-[node name="SlidingPuzzle" type="Control" unique_id=142496574]
+[node name="MinigameSlidingPuzzle" type="Control" unique_id=142496574]
 custom_minimum_size = Vector2(5.74, 0)
 layout_mode = 3
 anchor_left = 0.033854168
@@ -21,21 +21,24 @@ anchor_right = 0.9635417
 anchor_bottom = 0.9552469
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_eo3s4")
+script = ExtResource("1_vqdnr")
 metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=934529676]
 layout_mode = 0
-offset_right = 1071.0
-offset_bottom = 588.0
+offset_left = 9.0
+offset_top = 1.0
+offset_right = 1081.0
+offset_bottom = 585.0
 color = Color(0, 0, 0, 0.105882354)
 
 [node name="ExitButton" type="Button" parent="." unique_id=1370141433]
-layout_mode = 0
-anchor_left = 0.93744165
-anchor_top = 0.039115645
-anchor_right = 0.9747899
-anchor_bottom = 0.10714286
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.94957983
+anchor_top = 0.042517006
+anchor_right = 0.9869281
+anchor_bottom = 0.11054422
 metadata/_edit_use_anchors_ = true
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=594806627]
@@ -51,49 +54,49 @@ columns = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("2_nho4l")
+texture_normal = ExtResource("2_duces")
 
 [node name="Tile1" type="TextureButton" parent="GridContainer" unique_id=746919658]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("3_4ffmw")
+texture_normal = ExtResource("3_4chig")
 
 [node name="Tile2" type="TextureButton" parent="GridContainer" unique_id=760342076]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("4_b3gjb")
+texture_normal = ExtResource("4_bbgfj")
 
 [node name="Tile3" type="TextureButton" parent="GridContainer" unique_id=1653969867]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("5_5fprm")
+texture_normal = ExtResource("5_64eea")
 
 [node name="Tile4" type="TextureButton" parent="GridContainer" unique_id=1517574002]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("6_ltv2e")
+texture_normal = ExtResource("6_mnju7")
 
 [node name="Tile5" type="TextureButton" parent="GridContainer" unique_id=1984392417]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("7_60bih")
+texture_normal = ExtResource("7_qk2lg")
 
 [node name="Tile6" type="TextureButton" parent="GridContainer" unique_id=959302863]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("8_asc4g")
+texture_normal = ExtResource("8_bsyi4")
 
 [node name="Tile7" type="TextureButton" parent="GridContainer" unique_id=1206308545]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("9_0f6sn")
+texture_normal = ExtResource("9_co0gt")
 
 [node name="Tile8" type="TextureButton" parent="GridContainer" unique_id=1337926259]
 layout_mode = 2
