@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cjxcpil7s48nq" path="res://game/game.gd" id="1_xkndl"]
 [ext_resource type="PackedScene" uid="uid://cbb0c5shpy67j" path="res://ui/ZombieWindow.tscn" id="2_sb48q"]
 [ext_resource type="PackedScene" uid="uid://defvlperpo7m4" path="res://ui/Puzzles.tscn" id="3_u44n3"]
+[ext_resource type="AudioStream" uid="uid://d1khk2u8qvljg" path="res://assets/se/CreepyIceCreamTruckMusic.mp3" id="5_t88pq"]
 
 [node name="Game" type="Node" unique_id=1292676489]
 script = ExtResource("1_xkndl")
@@ -24,6 +25,8 @@ one_shot = true
 autostart = true
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=146292514]
+stream = ExtResource("5_t88pq")
+autoplay = true
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
 [connection signal="timeout" from="ZombieTimer" to="." method="_on_zombie_timer_timeout"]
