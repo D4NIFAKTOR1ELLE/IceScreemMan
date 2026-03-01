@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://k1epd3r2uous"]
 
-[ext_resource type="Script" uid="uid://b8et58lm1waa8" path="res://game/minigame_sliding_puzzle.gd" id="1_vqdnr"]
+[ext_resource type="Script" path="res://game/minigame_sliding_puzzle.gd" id="1_vqdnr"]
 [ext_resource type="Texture2D" uid="uid://dpog3hem55nxe" path="res://assets/art/Placeholder/PlaceHolderNumber1.png" id="2_duces"]
 [ext_resource type="Texture2D" uid="uid://v8johxxfmn50" path="res://assets/art/Placeholder/PlaceHolderNumber2.png" id="3_4chig"]
 [ext_resource type="Texture2D" uid="uid://cww04v68pyhs6" path="res://assets/art/Placeholder/PlaceHolderNumber3.png" id="4_bbgfj"]

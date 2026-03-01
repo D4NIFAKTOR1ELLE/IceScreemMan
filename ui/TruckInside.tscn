@@ -2,10 +2,6 @@
 
 [ext_resource type="Theme" uid="uid://on8hmefb85mk" path="res://ui/TruckTheme.tres" id="1_2orec"]
 [ext_resource type="Script" uid="uid://u656pi8oxcjm" path="res://ui/truck_inside.gd" id="1_kba1j"]
-<<<<<<< Updated upstream
-=======
-[ext_resource type="PackedScene" uid="uid://k1epd3r2uous" path="res://game/MinigameSlidingPuzzle.tscn" id="3_mb3o5"]
->>>>>>> Stashed changes
 
 [sub_resource type="Theme" id="Theme_kba1j"]
 
@@ -25,9 +21,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Panel" type="Panel" parent="Control" unique_id=1531100834]
 layout_mode = 1
 anchors_preset = -1
+anchor_left = -0.0026041667
 anchor_top = 0.49703264
 anchor_right = 1.0
-anchor_bottom = 0.9599407
+anchor_bottom = 0.96735907
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
@@ -35,8 +32,8 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5034722
-anchor_right = 1.0
-anchor_bottom = 0.95548964
+anchor_right = 1.0008681
+anchor_bottom = 0.9643917
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
