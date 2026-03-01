@@ -16,4 +16,3 @@ func spawn_zombie():
 
 func _on_zombie_left():
 	zombie_amount -= 1
-	print(zombie_amount)

@@ -11,52 +11,47 @@ bg_color = Color(0.46030778, 0.6600006, 0.46092975, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tg2ng"]
 bg_color = Color(0.05197096, 0.051970966, 0.051970914, 1)
 
-[node name="Zombie" type="Control" unique_id=151168050]
+[node name="CanvasLayer" type="Control" unique_id=1707748148]
 layout_mode = 3
-anchor_left = -0.15885417
-anchor_top = -0.1404321
-anchor_right = 0.16145833
-anchor_bottom = 0.5277778
-size_flags_horizontal = 3
-size_flags_vertical = 3
+anchors_preset = 0
 script = ExtResource("1_ioe0b")
-metadata/_edit_use_anchors_ = true
 
-[node name="Body" type="TextureRect" parent="." unique_id=220306732]
+[node name="Body" type="TextureRect" parent="." unique_id=1491403423]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.029810298
-anchor_top = 0.40415704
-anchor_right = 0.64498645
-anchor_bottom = 1.4018476
+anchor_left = 0.008680556
+anchor_top = 0.16512346
+anchor_right = 0.20808631
+anchor_bottom = 0.55460864
+offset_left = 21.999998
+offset_top = 96.0
+offset_right = 4966.5693
+offset_bottom = 5665.584
+scale = Vector2(0.05885244, 0.05673673)
 texture = ExtResource("2_w1o8s")
-expand_mode = 1
+expand_mode = 3
 stretch_mode = 4
-metadata/_edit_use_anchors_ = true
 
 [node name="RequestBubble" type="TextureRect" parent="." unique_id=2000104250]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.021680217
-anchor_top = 0.053117782
-anchor_right = 0.58265585
-anchor_bottom = 0.38799077
-offset_right = -6.0000153
-offset_bottom = -5.0
+anchor_right = 0.18229167
+anchor_bottom = 0.22685185
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("3_7tdba")
-expand_mode = 1
 stretch_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Requests" type="GridContainer" parent="RequestBubble" unique_id=1056846969]
-layout_mode = 0
-offset_left = 28.0
-offset_top = 21.0
-offset_right = 183.0
-offset_bottom = 110.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.092682935
+anchor_top = 0.13669065
+anchor_right = 0.8666667
+anchor_bottom = 0.7414966
 columns = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="RequestScoop" type="TextureRect" parent="RequestBubble/Requests" unique_id=1434150639]
 visible = false
@@ -73,10 +68,10 @@ one_shot = true
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=1165336007]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 317.0
-offset_right = 181.0
-offset_bottom = 328.0
+offset_left = 35.0
+offset_top = 274.0
+offset_right = 201.0
+offset_bottom = 283.0
 theme_override_styles/background = SubResource("StyleBoxFlat_ioe0b")
 theme_override_styles/fill = SubResource("StyleBoxFlat_tg2ng")
 value = 100.0
@@ -84,6 +79,6 @@ fill_mode = 1
 show_percentage = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1368786621]
+root_node = NodePath("")
 
 [connection signal="mouse_entered" from="Body" to="." method="_on_body_mouse_entered"]
-[connection signal="timeout" from="DissatisfactionTimer" to="." method="_on_dissatisfaction_timer_timeout"]
