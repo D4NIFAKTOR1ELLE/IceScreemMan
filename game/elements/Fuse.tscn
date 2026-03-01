@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://l8da5dsh4u06"]
+
+[ext_resource type="Texture2D" uid="uid://v8johxxfmn50" path="res://assets/art/Placeholder/PlaceHolderNumber2.png" id="2_30t33"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30t33"]
+size = Vector2(128, 128)
+
+[node name="Fuse" type="Area2D" unique_id=1640265583]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=943365853]
+shape = SubResource("RectangleShape2D_30t33")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=812197055]
+texture = ExtResource("2_30t33")
+
+[node name="Label" type="Label" parent="." unique_id=1922279440]
+offset_left = -40.0
+offset_top = -32.0
+offset_right = 40.0
+offset_bottom = 32.0

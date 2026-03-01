@@ -2,6 +2,8 @@ extends Node
 
 class_name Game
 
+
+
 @onready var gametimer: Timer = $GameTimer
 @onready var zombietimer: Timer = $ZombieTimer
 

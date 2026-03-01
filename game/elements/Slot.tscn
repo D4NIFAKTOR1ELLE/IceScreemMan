@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dq07utbs1lx1x"]
+
+[ext_resource type="Texture2D" uid="uid://dpog3hem55nxe" path="res://assets/art/Placeholder/PlaceHolderNumber1.png" id="1_xp2kj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xeldw"]
+size = Vector2(96, 96)
+
+[node name="Slot" type="TextureButton" unique_id=1012172277]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_xp2kj")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Area2D" type="Area2D" parent="." unique_id=498992967]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2022196290]
+position = Vector2(48, 48)
+shape = SubResource("RectangleShape2D_xeldw")
+
+[node name="Label" type="Label" parent="." unique_id=1242133430]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 40.0
+offset_right = 64.0
+offset_bottom = 63.0
