@@ -16,7 +16,6 @@ var cone_in_hand: bool = false
 var game_instance: Game
 var puzzles_until_win: int = 3
 
-
 var flavours: Dictionary = {
 	"Pickles": Color.LIGHT_GREEN,
 	"Bull Red": Color.LIGHT_CORAL,

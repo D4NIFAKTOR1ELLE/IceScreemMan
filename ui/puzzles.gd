@@ -31,4 +31,9 @@ func on_puzzle_beaten():
 	choose()
 
 func _on_visibility_changed() -> void:
-	pass
+	if visible:
+		panel.show()
+		panel.process_mode = Node.PROCESS_MODE_INHERIT
+	else:
+		panel.hide()
+		panel.process_mode = Node.PROCESS_MODE_DISABLED
