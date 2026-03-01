@@ -48,61 +48,61 @@ theme_override_font_sizes/font_size = 40
 text = "Results"
 horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=680315015]
+[node name="SanityContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=680315015]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2115114453]
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/SanityContainer" unique_id=2115114453]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 texture = ExtResource("1_rte7b")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1145075838]
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/SanityContainer" unique_id=1145075838]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 28
 text = "SANITY"
 vertical_alignment = 1
 
-[node name="Score" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1758974375]
+[node name="Score" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/SanityContainer" unique_id=1758974375]
 layout_mode = 2
 size_flags_horizontal = 10
 theme_override_font_sizes/font_size = 28
 text = "0/5"
 vertical_alignment = 1
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=583035490]
+[node name="TimerContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=583035490]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1240439933]
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/TimerContainer" unique_id=1240439933]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 texture = ExtResource("2_x707d")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1601292482]
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/TimerContainer" unique_id=1601292482]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 28
 text = "TIME LEFT"
 vertical_alignment = 1
 
-[node name="Score" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1864122503]
+[node name="Score" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/TimerContainer" unique_id=1864122503]
 layout_mode = 2
 size_flags_horizontal = 10
 theme_override_font_sizes/font_size = 28
 text = "00:00"
 vertical_alignment = 1
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1603921077]
+[node name="ZombieContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1603921077]
 layout_mode = 2
 size_flags_vertical = 10
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=224391518]
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/ZombieContainer" unique_id=224391518]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -111,7 +111,7 @@ texture = ExtResource("3_e6jkr")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1086818373]
+[node name="TextureRect2" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/ZombieContainer" unique_id=1086818373]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -120,7 +120,7 @@ texture = ExtResource("3_e6jkr")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect3" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1836553150]
+[node name="TextureRect3" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/ZombieContainer" unique_id=1836553150]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -129,17 +129,17 @@ texture = ExtResource("3_e6jkr")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1782155262]
+[node name="ScoreContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1782155262]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=74284199]
+[node name="Label2" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/ScoreContainer" unique_id=74284199]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 28
 text = "Final Score"
 
-[node name="Label3" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1061537109]
+[node name="Label3" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/ScoreContainer" unique_id=1061537109]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 28
