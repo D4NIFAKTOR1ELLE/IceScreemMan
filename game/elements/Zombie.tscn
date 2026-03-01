@@ -76,4 +76,5 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_tg2ng")
 value = 50.0
 show_percentage = false
 
+[connection signal="mouse_entered" from="Body" to="." method="_on_body_mouse_entered"]
 [connection signal="timeout" from="DissatisfactionTimer" to="." method="_on_dissatisfaction_timer_timeout"]
