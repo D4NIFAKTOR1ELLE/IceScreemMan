@@ -1,20 +1,11 @@
 [gd_scene format=3 uid="uid://c3hotr6bulesh"]
 
-[ext_resource type="Script" uid="uid://c6xplk3jux5p0" path="res://game/main_menu.gd" id="1_iek8j"]
+[ext_resource type="Script" uid="uid://c6xplk3jux5p0" path="res://ui/main_menu.gd" id="1_iek8j"]
 [ext_resource type="FontFile" uid="uid://c0e4wih8f2tt0" path="res://assets/fonts/calligtastrophe/Calligstrophe.ttf" id="1_yqcqj"]
 [ext_resource type="Texture2D" uid="uid://dmd6xp8g71l84" path="res://assets/art/extra/cone_scoop.png" id="2_8nu7y"]
 [ext_resource type="Texture2D" uid="uid://dh6n3gxhydirk" path="res://assets/art/extra/cone.png" id="3_iek8j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nj8pi"]
-bg_color = Color(0.50980395, 0.70980394, 0.39607844, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_size = 12
-shadow_offset = Vector2(0, 0.6)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8nu7y"]
 bg_color = Color(0.50980395, 0.70980394, 0.39607844, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
@@ -76,8 +67,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 4
 theme_override_fonts/normal_font = ExtResource("1_yqcqj")
 theme_override_font_sizes/normal_font_size = 38
-text = "Ice Scream by 
-Moonlight"
+text = "Ice Scream by Moonlight"
 horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=72500613]
@@ -104,16 +94,6 @@ theme_override_font_sizes/font_size = 28
 theme_override_icons/icon = ExtResource("2_8nu7y")
 theme_override_styles/normal = SubResource("StyleBoxFlat_nj8pi")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_nj8pi")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8nu7y")
-text = "Start Game With Story"
-
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1696275651]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
-theme_override_styles/normal = SubResource("StyleBoxFlat_nj8pi")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_nj8pi")
 theme_override_styles/hover = SubResource("StyleBoxFlat_iek8j")
 text = "Start Game Without Story"
 icon = ExtResource("3_iek8j")
@@ -129,5 +109,4 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_nj8pi")
 text = "Exit"
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_onStartstory_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_startnostory_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]

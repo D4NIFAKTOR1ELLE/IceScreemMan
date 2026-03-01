@@ -4,6 +4,7 @@
 
 [node name="Puzzles" type="CanvasLayer" unique_id=2122768542]
 layer = 3
+visible = false
 script = ExtResource("1_24mw7")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1810880516]

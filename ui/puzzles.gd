@@ -24,11 +24,16 @@ func on_puzzle_beaten():
 	Constants.puzzles_until_win -= 1
 	
 	if Constants.puzzles_until_win == 0:
-		Constants.game_instance.win()
+		Game.win()
 
 	current_puzzle.queue_free()
 
 	choose()
 
 func _on_visibility_changed() -> void:
-	pass
+	if visible:
+		panel.show()
+		panel.process_mode = Node.PROCESS_MODE_INHERIT
+	else:
+		panel.hide()
+		panel.process_mode = Node.PROCESS_MODE_DISABLED

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cebmytw6mr237"]
+
+[node name="Story" type="CanvasLayer" unique_id=1181717537]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1600406502]
+offset_right = 1147.0
+offset_bottom = 647.0
