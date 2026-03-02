@@ -74,6 +74,8 @@ func _on_dissatisfaction_timer_timeout() -> void:
 
 func _on_body_mouse_entered() -> void:
 	if Constants.cone_in_hand and !Constants.new_cone.flavours_in_scoop.is_empty():
+		if request.size() != Constants.new_cone.flavours_in_scoop.size(): return
+		
 		for item in Constants.new_cone.flavours_in_scoop:
 			if !request.has(item): return
 			if Constants.new_cone.flavours_in_scoop.count(item) != request.count(item): return

@@ -1,36 +1,18 @@
 [gd_scene format=3 uid="uid://d07fm1mkhhav6"]
 
 [ext_resource type="Script" uid="uid://cppr7vcxs4knw" path="res://game/minigame_whack_a_mole.gd" id="1_vblmd"]
-[ext_resource type="PackedScene" uid="uid://b7muxyohu0fan" path="res://game/elements/WhackAZombieZombie.tscn" id="2_fx3an"]
 
-[node name="MinigameWhackAMole" type="Node2D" unique_id=1558065705]
+[node name="MinigameWhackAMole" type="Control" unique_id=800698821]
+layout_mode = 3
+anchor_left = -0.0017361111
+anchor_top = -0.0030864198
+anchor_right = 0.45225695
+anchor_bottom = 1.0030864
 script = ExtResource("1_vblmd")
 metadata/_edit_use_anchors_ = true
 
 [node name="Node" type="Node" parent="." unique_id=526969367]
 
-[node name="WhackAZombieZombie2" parent="Node" unique_id=896822770 groups=["holes"] instance=ExtResource("2_fx3an")]
-position = Vector2(1023, 112)
-
-[node name="WhackAZombieZombie3" parent="Node" unique_id=987988660 groups=["holes"] instance=ExtResource("2_fx3an")]
-position = Vector2(774, 567)
-
-[node name="WhackAZombieZombie4" parent="Node" unique_id=1532061917 groups=["holes"] instance=ExtResource("2_fx3an")]
-position = Vector2(822, 215)
-
-[node name="WhackAZombieZombie5" parent="Node" unique_id=1058025865 groups=["holes"] instance=ExtResource("2_fx3an")]
-position = Vector2(869, 442)
-
-[node name="WhackAZombieZombie6" parent="Node" unique_id=228364504 groups=["holes"] instance=ExtResource("2_fx3an")]
-position = Vector2(674, 358)
-
-[node name="WhackAZombieZombie7" parent="Node" unique_id=1245510654 groups=["holes"] instance=ExtResource("2_fx3an")]
-position = Vector2(1007, 323)
-
-[node name="WhackAZombieZombie" parent="Node" unique_id=793144184 groups=["holes"] instance=ExtResource("2_fx3an")]
-position = Vector2(637, 113)
-
 [node name="SpawnTimer" type="Timer" parent="." unique_id=1824193922]
 
-[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

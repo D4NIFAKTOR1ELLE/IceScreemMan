@@ -37,13 +37,3 @@ func win_game():
 
 func _on_exit_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Game.tscn")
-
-func _on_visibility_changed() -> void:
-	if !visible:
-		for zombie in $Node.get_children():
-			zombie.process_mode = Node.PROCESS_MODE_DISABLED
-			zombie.hide()
-	else:
-		for zombie in $Node.get_children():
-			zombie.process_mode = Node.PROCESS_MODE_INHERIT
-			zombie.show()
