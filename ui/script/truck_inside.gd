@@ -7,11 +7,19 @@ extends CanvasLayer
 func initialise(flavour_array: Array[String]):
 	var index: int = 0
 	
+	for flavour in range(5):
+		var new_button = $Control/Flavours/TextureButton.duplicate()
+		$Control/Flavours.add_child(new_button)
+	
 	for button in $Control/Flavours.get_children():
 		button.name = flavour_array[index]
 		button.self_modulate = Constants.flavours.get(flavour_array[index])
 		button.connect("pressed", _on_flavour_pressed.bind(button))
 		index = index + 1
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("open_engine"):
+		_on_engine_pressed()
 
 func _on_engine_pressed() -> void:
 	Game.puzzle_window.visible = !Game.puzzle_window.visible

@@ -10,7 +10,11 @@ extends CanvasLayer
 @onready var puzzle_window: CanvasLayer = $Puzzles
 
 var current_flavour_roster: Array[String] = []
+
+@onready var start_screen := preload("res://ui/MainMenu.tscn")
 @onready var result_screen := preload("res://ui/ResultScreen.tscn")
+@onready var win_screen := preload("res://ui/Win_Screen.tscn")
+@onready var lose_screen := preload("res://ui/Lose_Screen.tscn")
 
 func launch_game():
 	current_flavour_roster.clear()
@@ -42,7 +46,7 @@ func win():
 	for zombie in zombie_window.zombie_container.get_children():
 		zombie.queue_free()
 
-	result_screen.instantiate()
+	get_tree().change_scene_to_node(result_screen.instantiate())
 
 func lose():
 	gametimer.stop()
@@ -51,6 +55,7 @@ func lose():
 	for zombie in zombie_window.zombie_container.get_children():
 		zombie.queue_free()
 	
+	get_tree().change_scene_to_node(lose_screen.instantiate())
 
 func _on_game_timer_timeout() -> void:
 	win()

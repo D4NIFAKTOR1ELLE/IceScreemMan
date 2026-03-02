@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c3hotr6bulesh"]
 
-[ext_resource type="Script" uid="uid://c6xplk3jux5p0" path="res://ui/main_menu.gd" id="1_iek8j"]
+[ext_resource type="Script" uid="uid://c6xplk3jux5p0" path="res://ui/script/main_menu.gd" id="1_iek8j"]
 [ext_resource type="FontFile" uid="uid://c0e4wih8f2tt0" path="res://assets/fonts/calligtastrophe/Calligstrophe.ttf" id="1_yqcqj"]
 [ext_resource type="Texture2D" uid="uid://dmd6xp8g71l84" path="res://assets/art/extra/cone_scoop.png" id="2_8nu7y"]
 [ext_resource type="Texture2D" uid="uid://dh6n3gxhydirk" path="res://assets/art/extra/cone.png" id="3_iek8j"]

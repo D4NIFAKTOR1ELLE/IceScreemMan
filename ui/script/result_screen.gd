@@ -1,0 +1,8 @@
+extends Control
+
+func load_data():
+	$TextureRect/MarginContainer/VBoxContainer/SanityContainer/Score.text = "%d / %d" % [Constants.sanity, Constants.max_sanity] 
+	$TextureRect/MarginContainer/VBoxContainer/TimerContainer/Score.text = "%02d:%02d" % [Game.gametimer.time_left / 60, fmod(Game.gametimer.time_left, 60)]
+
+func _on_button_pressed() -> void:
+	pass # Replace with function body.
