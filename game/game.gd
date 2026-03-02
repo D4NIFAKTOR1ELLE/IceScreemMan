@@ -18,11 +18,16 @@ var current_flavour_roster: Array[String] = []
 
 func launch_game():
 	current_flavour_roster.clear()
+	if Constants.new_cone:
+		Constants.new_cone.free()
+	for child in puzzle_window.panel.get_children():
+		child.free()
 	pick_flavours()
 	
 	zombie_window.zombie_amount = 0
 	truck_inside.parts_repaired.text = "0 / 3"
 	Constants.sanity = Constants.max_sanity
+	Constants.puzzles_until_win = 3
 	truck_inside.sanity_overlay.size.x = 70 * Constants.max_sanity
 	truck_inside.sanity_bar.max_value = Constants.max_sanity
 	truck_inside.sanity_bar.value = Constants.max_sanity
