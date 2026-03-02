@@ -46,8 +46,9 @@ func leave_angrily():
 	if Constants.sanity == 0:
 		Game.lose()
 		
+	animationplayer.play("leave_angry")
+	await animationplayer.animation_finished
 	left.emit()
-		
 	queue_free()
 
 func leave_happily():
@@ -55,8 +56,10 @@ func leave_happily():
 	Constants.cone_in_hand = false
 	Constants.new_cone.queue_free()
 	
-	left.emit()
 	
+	animationplayer.play("leave_happy")
+	await animationplayer.animation_finished
+	left.emit()
 	queue_free()
 
 func update_progress():

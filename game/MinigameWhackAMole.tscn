@@ -32,4 +32,5 @@ position = Vector2(637, 113)
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=1824193922]
 
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
