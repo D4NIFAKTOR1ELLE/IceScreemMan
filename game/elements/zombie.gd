@@ -17,7 +17,10 @@ var zombies: Array[String] = [
 	"res://assets/art/zombies/zombieTeen1.png",
 	"res://assets/art/zombies/mandela1.png",
 	"res://assets/art/zombies/mandela2.png",
-	"res://assets/art/zombies/mandela3.png"]
+	"res://assets/art/zombies/mandela3.png",
+	"res://assets/art/zombies/brainZombie.png",
+	"res://assets/art/zombies/ladyZombie.png",
+	"res://assets/art/zombies/zombie1.png"]
 
 func _ready() -> void:
 	body.texture = load(zombies[randi_range(0, zombies.size() - 1)])

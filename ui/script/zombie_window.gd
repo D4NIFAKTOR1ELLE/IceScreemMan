@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var zombie_container: Container = $Zombies
+@onready var zombie_container: Container = $TextureRect2/Zombies
 
 var zombie_amount: int = 0
 

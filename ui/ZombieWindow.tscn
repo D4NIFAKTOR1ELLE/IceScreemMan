@@ -2,22 +2,36 @@
 
 [ext_resource type="Script" uid="uid://c02v4x02xk6bc" path="res://ui/script/zombie_window.gd" id="1_gi2vt"]
 [ext_resource type="Texture2D" uid="uid://b018kce6gg0k7" path="res://assets/art/extra/background_outside_blur.png" id="2_gi2vt"]
+[ext_resource type="Texture2D" uid="uid://troeflg77epk" path="res://assets/art/extra/window_mask.png" id="2_xrwar"]
 
 [node name="ZombieWindow" type="CanvasLayer" unique_id=1651551599]
 script = ExtResource("1_gi2vt")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=2145583788]
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=344561327]
+clip_children = 1
+offset_left = 2.0
+offset_right = 599.0
+offset_bottom = 365.0
+texture = ExtResource("2_xrwar")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect2" unique_id=2145583788]
 self_modulate = Color(0.8132577, 0.8132577, 0.81325763, 1)
-offset_right = 694.0
-offset_bottom = 381.0
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 628.0
+offset_bottom = 366.0
 texture = ExtResource("2_gi2vt")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Zombies" type="GridContainer" parent="." unique_id=755484618]
+[node name="Zombies" type="GridContainer" parent="TextureRect2" unique_id=755484618]
+layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.48524305
-anchor_bottom = 0.5015432
+anchor_top = 0.005479452
+anchor_right = 1.0284758
+anchor_bottom = 0.9945205
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/h_separation = 180

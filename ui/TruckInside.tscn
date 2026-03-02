@@ -17,15 +17,6 @@ gradient = SubResource("Gradient_1e45c")
 fill_from = Vector2(0, 1)
 fill_to = Vector2(0, 0)
 
-[sub_resource type="Gradient" id="Gradient_mb3o5"]
-offsets = PackedFloat32Array(0, 0.9578313)
-colors = PackedColorArray(0.45678598, 0.41594487, 0.46308905, 1, 0.30806345, 0.27662453, 0.312928, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_xp5ev"]
-gradient = SubResource("Gradient_mb3o5")
-fill_from = Vector2(0, 1)
-fill_to = Vector2(0, 0)
-
 [sub_resource type="Theme" id="Theme_kba1j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mb3o5"]
@@ -34,6 +25,7 @@ fill_to = Vector2(0, 0)
 bg_color = Color(0.9678531, 0.5758627, 0.59350264, 1)
 
 [node name="TruckInside" type="CanvasLayer" unique_id=360068417]
+layer = -1
 script = ExtResource("1_kba1j")
 
 [node name="Control" type="Control" parent="." unique_id=1809332801]
@@ -47,22 +39,11 @@ metadata/_edit_use_anchors_ = true
 [node name="Panel2" type="TextureRect" parent="Control" unique_id=365301270]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5034722
+anchor_left = -0.0017361111
 anchor_right = 1.0008681
 anchor_bottom = 0.9643917
 mouse_filter = 2
 texture = SubResource("GradientTexture2D_igbbj")
-metadata/_edit_use_anchors_ = true
-
-[node name="Panel" type="TextureRect" parent="Control" unique_id=2074216466]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.0026041667
-anchor_top = 0.49703264
-anchor_right = 1.0
-anchor_bottom = 0.96735907
-mouse_filter = 2
-texture = SubResource("GradientTexture2D_xp5ev")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sanity" type="Label" parent="Control" unique_id=2048519722]
