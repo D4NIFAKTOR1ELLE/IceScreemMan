@@ -162,5 +162,5 @@ icon = ExtResource("3_iek8j")
 libraries/ = SubResource("AnimationLibrary_g5fyd")
 autoplay = &"auto"
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_startnostory_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_onStartstory_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_startnostory_pressed"]

@@ -21,6 +21,7 @@ func launch_game():
 	pick_flavours()
 	
 	zombie_window.zombie_amount = 0
+	truck_inside.parts_repaired.text = "0 / 3"
 	Constants.sanity = Constants.max_sanity
 	truck_inside.sanity_overlay.size.x = 70 * Constants.max_sanity
 	truck_inside.sanity_bar.max_value = Constants.max_sanity
@@ -28,6 +29,7 @@ func launch_game():
 	truck_inside.sanity_bar.size = truck_inside.sanity_overlay.size 
 	puzzle_window.initialise()
 	
+	set_process_input(true)
 	truck_inside.set_process_input(true)
 	zombietimer.start()
 	gametimer.start()

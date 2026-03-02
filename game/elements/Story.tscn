@@ -4,15 +4,151 @@
 [ext_resource type="Script" uid="uid://ve0ujqpflpog" path="res://game/elements/story.gd" id="1_smso2"]
 [ext_resource type="AudioStream" uid="uid://bnodjjmrt4wou" path="res://assets/se/IceCreamTruck1.mp3" id="1_tgyml"]
 
+[sub_resource type="Animation" id="Animation_vxeyq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_smso2"]
+resource_name = "panel_1"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [Vector2(0, -50), Vector2(-810, -50)]
+}
+
+[sub_resource type="Animation" id="Animation_gtpue"]
+resource_name = "panel_2"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [Vector2(-810, -50), Vector2(-44, -712)]
+}
+
+[sub_resource type="Animation" id="Animation_snesn"]
+resource_name = "panel_3"
+length = 2.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [Vector2(-44, -712), Vector2(-810, -709)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.1, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [false],
+"method": &"set_process_input"
+}, {
+"args": [],
+"method": &"abrupt_in"
+}, {
+"args": [],
+"method": &"launch"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.5, 1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vxeyq"]
+_data = {
+&"RESET": SubResource("Animation_vxeyq"),
+&"panel_1": SubResource("Animation_smso2"),
+&"panel_2": SubResource("Animation_gtpue"),
+&"panel_3": SubResource("Animation_snesn")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_smso2"]
+bg_color = Color(0.17636988, 0.17795357, 0.23383218, 1)
+
 [node name="Story" type="CanvasLayer" unique_id=1181717537]
 script = ExtResource("1_smso2")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1600406502]
-offset_right = 4960.0
-offset_bottom = 3406.0
+offset_top = -50.0
+offset_right = 2356.0
+offset_bottom = 1320.0
+pivot_offset = Vector2(1400, 1000)
 texture = ExtResource("1_ikjta")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=259627527]
 stream = ExtResource("1_tgyml")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1813014051]
+libraries/ = SubResource("AnimationLibrary_vxeyq")
+
+[node name="Label" type="RichTextLabel" parent="." unique_id=828375205]
+offset_left = 223.0
+offset_top = 560.0
+offset_right = 923.0
+offset_bottom = 610.0
+theme_override_font_sizes/normal_font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_smso2")
+bbcode_enabled = true
+text = "Press [color=yellow]Enter[/color] to continue the story."
+horizontal_alignment = 1
+vertical_alignment = 1

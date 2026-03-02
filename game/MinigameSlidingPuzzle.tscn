@@ -10,6 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://4xvnkqrwcg8w" path="res://assets/art/Placeholder/PlaceHolderNumber7.png" id="8_bsyi4"]
 [ext_resource type="Texture2D" uid="uid://brret4eovargp" path="res://assets/art/Placeholder/PlaceHolderNumber8.png" id="9_co0gt"]
 
+[sub_resource type="Gradient" id="Gradient_vqdnr"]
+colors = PackedColorArray(0.014444652, 0.010239263, 0.007906146, 1, 0.4045111, 0.40451115, 0.4045111, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_duces"]
+gradient = SubResource("Gradient_vqdnr")
+fill_to = Vector2(0, 1)
+
 [node name="MinigameSlidingPuzzle" type="Control" unique_id=142496574]
 custom_minimum_size = Vector2(5.74, 0)
 layout_mode = 3
@@ -105,6 +112,7 @@ stretch_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+texture_normal = SubResource("GradientTexture2D_duces")
 ignore_texture_size = true
 stretch_mode = 0
 
