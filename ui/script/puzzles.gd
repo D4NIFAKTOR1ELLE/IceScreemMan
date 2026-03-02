@@ -21,13 +21,17 @@ func choose():
 	panel.add_child(current_puzzle)
 	
 func on_puzzle_beaten():
-	await get_tree().create_timer(1).timeout
+	$AudioStreamPlayer.play()
 	
 	hide()
 	
 	Constants.puzzles_until_win -= 1
+	Game.truck_inside.parts_repaired.bbcode_text = "%d / 3" % (3 - Constants.puzzles_until_win)
 	
 	if Constants.puzzles_until_win == 0:
+		await get_tree().create_timer(1).timeout
+		$AudioStreamPlayer.stream = load("res://assets/se/freesound_community-carengine-5998.mp3")
+		$AudioStreamPlayer.play()
 		Game.win()
 		$PanelContainer.get_child(0).queue_free()
 		return

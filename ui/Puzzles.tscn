@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://iqbm7f8r7wsx" path="res://ui/script/puzzles.gd" id="1_24mw7"]
 [ext_resource type="Texture2D" uid="uid://domnva2a0hy55" path="res://assets/art/extra/puzzles_bg.png" id="2_4ni2q"]
+[ext_resource type="AudioStream" uid="uid://dlh25pmjseb6l" path="res://assets/se/dragon-studio-correct-472358.mp3" id="3_y1vir"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_24mw7"]
 
@@ -34,6 +35,10 @@ anchor_top = 0.040123455
 anchor_right = 0.9540149
 anchor_bottom = 0.10815067
 metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=833682793]
+stream = ExtResource("3_y1vir")
+volume_db = -11.86
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

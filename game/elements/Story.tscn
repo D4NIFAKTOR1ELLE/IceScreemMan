@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://cebmytw6mr237"]
 
 [ext_resource type="Texture2D" uid="uid://34tkdjsobqol" path="res://assets/art/extra/comic.jpg" id="1_ikjta"]
+[ext_resource type="Script" uid="uid://ve0ujqpflpog" path="res://game/elements/story.gd" id="1_smso2"]
 [ext_resource type="AudioStream" uid="uid://bnodjjmrt4wou" path="res://assets/se/IceCreamTruck1.mp3" id="1_tgyml"]
 
 [node name="Story" type="CanvasLayer" unique_id=1181717537]
+script = ExtResource("1_smso2")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1600406502]
 offset_right = 4960.0
@@ -12,3 +14,5 @@ texture = ExtResource("1_ikjta")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=259627527]
 stream = ExtResource("1_tgyml")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1813014051]
