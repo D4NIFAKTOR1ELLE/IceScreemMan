@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://cebmytw6mr237"]
 
+[ext_resource type="AudioStream" uid="uid://bnodjjmrt4wou" path="res://assets/se/IceCreamTruck1.mp3" id="1_tgyml"]
+
 [node name="Story" type="CanvasLayer" unique_id=1181717537]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1600406502]
 offset_right = 1147.0
 offset_bottom = 647.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=259627527]
+stream = ExtResource("1_tgyml")
