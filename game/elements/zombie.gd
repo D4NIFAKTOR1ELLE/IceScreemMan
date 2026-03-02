@@ -56,7 +56,10 @@ func leave_angrily():
 	
 	if Constants.sanity == 0:
 		Game.lose()
-		
+
+	audio.stream = load("res://assets/se/universfield-error-02-126514.mp3")
+	audio.play()
+
 	animationplayer.play("leave_angry")
 	await animationplayer.animation_finished
 	left.emit()
@@ -68,7 +71,6 @@ func leave_happily():
 	dissatisfaction_timer.stop()
 	Constants.cone_in_hand = false
 	Constants.new_cone.queue_free()
-	
 	
 	animationplayer.play("leave_happy")
 	await animationplayer.animation_finished
