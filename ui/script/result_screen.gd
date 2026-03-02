@@ -8,10 +8,10 @@ func load_data():
 	
 func update_stars() -> void:
 	if calculate_stars() == 1:
-		$TextureRect/MarginContainer/VBoxContainer/ScoreContainer/Label2.modulate = Color(0.3, 0.3, 0.3)
-		$TextureRect/MarginContainer/VBoxContainer/ScoreContainer/Label3.modulate = Color(0.3, 0.3, 0.3)
+		$TextureRect/MarginContainer/VBoxContainer/ZombieContainer/TextureRect2.modulate = Color(0.3, 0.3, 0.3)
+		$TextureRect/MarginContainer/VBoxContainer/ZombieContainer/TextureRect3.modulate = Color(0.3, 0.3, 0.3)
 	elif calculate_stars() == 2:
-		$TextureRect/MarginContainer/VBoxContainer/ScoreContainer/Label3.modulate = Color(0.3, 0.3, 0.3)
+		$TextureRect/MarginContainer/VBoxContainer/ZombieContainer/TextureRect3.modulate = Color(0.3, 0.3, 0.3)
 
 func calculate_stars() -> int: # 1 Stern fuer Gewinnen, 1 Stern fuer alle Sanity und 1 Stern fuer mehr als 2 min Zeit left
 	var stars = 1
