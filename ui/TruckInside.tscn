@@ -60,20 +60,20 @@ metadata/_edit_use_anchors_ = true
 [node name="TimeButton" type="Label" parent="Control" unique_id=1309789169]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.27256945
-anchor_top = 0.6498516
-anchor_right = 0.3402778
-anchor_bottom = 0.7121662
+anchor_left = 0.2751736
+anchor_top = 0.54451036
+anchor_right = 0.34288195
+anchor_bottom = 0.60682493
 text = "Time"
 metadata/_edit_use_anchors_ = true
 
 [node name="Time" type="Label" parent="Control" unique_id=1147665987]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.27604166
-anchor_top = 0.72106826
-anchor_right = 0.41499996
-anchor_bottom = 0.84244806
+anchor_left = 0.27864584
+anchor_top = 0.615727
+anchor_right = 0.41760412
+anchor_bottom = 0.7371068
 offset_right = -27.079956
 offset_bottom = -11.809998
 theme = ExtResource("1_2orec")
@@ -142,6 +142,16 @@ offset_bottom = 1.0
 texture_normal = ExtResource("6_aqxix")
 texture_hover = ExtResource("7_quuv6")
 metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="RichTextLabel" parent="." unique_id=1165894826]
+offset_left = 322.0
+offset_top = 490.0
+offset_right = 547.0
+offset_bottom = 548.0
+theme_override_colors/default_color = Color(0.93, 0.7161, 0.812355, 0.6117647)
+theme_override_font_sizes/normal_font_size = 27
+bbcode_enabled = true
+text = "<- Press ([color=yellow]W[/color]) to look through your engine."
 
 [connection signal="pressed" from="Control/Engine" to="." method="_on_engine_pressed"]
 [connection signal="pressed" from="Control/ConeButton" to="." method="_on_cone_button_pressed"]

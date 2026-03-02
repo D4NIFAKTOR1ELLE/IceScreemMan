@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://cqov7dmub3q0d"]
+
+[ext_resource type="Script" uid="uid://erx8fstrce0r" path="res://ui/transitions/transition.gd" id="1_gc58f"]
+
+[sub_resource type="Animation" id="Animation_f61p2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gc58f"]
+resource_name = "abrupt_in"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.00392157, 0.00392157, 0.00392157, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4sjgu"]
+resource_name = "abrupt_out"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1blni"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0.00392157, 0.00392157, 0.00392157, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0vuqx"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.00392157, 0.00392157, 0.00392157, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gylp2"]
+_data = {
+&"RESET": SubResource("Animation_f61p2"),
+&"abrupt_in": SubResource("Animation_gc58f"),
+&"abrupt_out": SubResource("Animation_4sjgu"),
+&"fade_in": SubResource("Animation_1blni"),
+&"fade_out": SubResource("Animation_0vuqx")
+}
+
+[node name="Transition" type="CanvasLayer" unique_id=1035042952]
+layer = 5
+script = ExtResource("1_gc58f")
+
+[node name="TransitionPlayer" type="AnimationPlayer" parent="." unique_id=56397233]
+libraries/ = SubResource("AnimationLibrary_gylp2")
+speed_scale = 2.0
+
+[node name="Background" type="ColorRect" parent="." unique_id=581914257]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[connection signal="animation_finished" from="TransitionPlayer" to="." method="_on_transition_player_animation_finished"]

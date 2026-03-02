@@ -28,6 +28,7 @@ func launch_game():
 	truck_inside.sanity_bar.size = truck_inside.sanity_overlay.size 
 	puzzle_window.initialise()
 	
+	truck_inside.set_process_input(true)
 	zombietimer.start()
 	gametimer.start()
 
@@ -44,15 +45,20 @@ func win():
 	gametimer.stop()
 	zombietimer.stop()
 	puzzle_window.panel.hide()
+	truck_inside.set_process_input(false)
 	
 	for zombie in zombie_window.zombie_container.get_children():
 		zombie.queue_free()
 
-	get_tree().change_scene_to_node(result_screen.instantiate())
+	var new_result_screen = result_screen.instantiate()
+	new_result_screen.load_data()
+	get_tree().change_scene_to_node(new_result_screen)
 
 func lose():
 	gametimer.stop()
 	zombietimer.stop()
+	puzzle_window.panel.hide()
+	truck_inside.set_process_input(false)
 	
 	for zombie in zombie_window.zombie_container.get_children():
 		zombie.queue_free()

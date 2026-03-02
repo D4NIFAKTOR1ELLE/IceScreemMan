@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Constants="*uid://c1jsla0i162ur"
 Game="*uid://bghqkshvrsfku"
+Transition="*uid://cqov7dmub3q0d"
 
 [display]
 
