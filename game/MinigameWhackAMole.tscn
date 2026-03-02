@@ -7,7 +7,7 @@
 script = ExtResource("1_vblmd")
 metadata/_edit_use_anchors_ = true
 
-[node name="Node" type="Node" parent="." unique_id=526969367]
+[node name="Node" type="Node" parent="." unique_id=1478330324]
 
 [node name="WAZZombie" parent="Node" unique_id=1521900750 instance=ExtResource("2_vblmd")]
 position = Vector2(757, 122)
@@ -26,4 +26,5 @@ position = Vector2(748, 485)
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=1824193922]
 
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

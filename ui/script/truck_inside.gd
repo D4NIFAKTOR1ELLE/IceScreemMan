@@ -3,12 +3,16 @@ extends CanvasLayer
 @onready var flavours: Array[Button] = []
 @onready var sanity_overlay = $Control/SanityOverlay
 @onready var sanity_bar = $Control/SanityOverlay/ProgressBar
+@onready var flavour_button = preload("res://ui/FlavourContainer.tscn")
 
 func initialise(flavour_array: Array[String]):
 	var index: int = 0
 	
-	for flavour in range(5):
-		var new_button = $Control/Flavours/TextureButton.duplicate()
+	for child in $Control/Flavours.get_children():
+		child.free()
+	
+	for flavour in range(6):
+		var new_button = flavour_button.instantiate()
 		$Control/Flavours.add_child(new_button)
 	
 	for button in $Control/Flavours.get_children():

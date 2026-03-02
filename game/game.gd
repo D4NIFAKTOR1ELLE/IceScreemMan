@@ -20,6 +20,7 @@ func launch_game():
 	current_flavour_roster.clear()
 	pick_flavours()
 	
+	zombie_window.zombie_amount = 0
 	Constants.sanity = Constants.max_sanity
 	truck_inside.sanity_overlay.size.x = 70 * Constants.max_sanity
 	truck_inside.sanity_bar.max_value = Constants.max_sanity
@@ -42,6 +43,7 @@ func pick_flavours():
 func win():
 	gametimer.stop()
 	zombietimer.stop()
+	puzzle_window.panel.hide()
 	
 	for zombie in zombie_window.zombie_container.get_children():
 		zombie.queue_free()

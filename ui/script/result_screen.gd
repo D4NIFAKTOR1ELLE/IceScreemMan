@@ -5,4 +5,4 @@ func load_data():
 	$TextureRect/MarginContainer/VBoxContainer/TimerContainer/Score.text = "%02d:%02d" % [Game.gametimer.time_left / 60, fmod(Game.gametimer.time_left, 60)]
 
 func _on_button_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_node(Game.win_screen.instantiate())

@@ -13,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.19215687)
+color = Color(0.40151873, 0.33790702, 0.44579947, 1)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1847300891]
 offset_right = 1152.0
@@ -145,6 +145,6 @@ offset_left = 477.0
 offset_top = 526.0
 offset_right = 710.0
 offset_bottom = 575.0
-text = "Back to Start Screen"
+text = "Continue"
 
 [connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]

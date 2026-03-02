@@ -2,7 +2,6 @@
 
 [ext_resource type="Theme" uid="uid://on8hmefb85mk" path="res://ui/script/TruckTheme.tres" id="1_2orec"]
 [ext_resource type="Script" uid="uid://u656pi8oxcjm" path="res://ui/script/truck_inside.gd" id="1_kba1j"]
-[ext_resource type="Texture2D" uid="uid://btjjqxolgokax" path="res://assets/art/extra/ice_cream_container.png" id="3_mb3o5"]
 [ext_resource type="Texture2D" uid="uid://cvlbjilhixub" path="res://assets/art/extra/sanity_box.png" id="3_xp5ev"]
 
 [sub_resource type="Theme" id="Theme_kba1j"]
@@ -111,12 +110,6 @@ theme_override_constants/h_separation = 6
 theme_override_constants/v_separation = 6
 columns = 3
 metadata/_edit_use_anchors_ = true
-
-[node name="TextureButton" type="TextureButton" parent="Control/Flavours" unique_id=1614663341]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = ExtResource("3_mb3o5")
 
 [node name="Engine" type="Button" parent="Control" unique_id=1315931439]
 layout_mode = 0

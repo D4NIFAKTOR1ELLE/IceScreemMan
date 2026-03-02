@@ -25,6 +25,7 @@ func on_puzzle_beaten():
 	
 	if Constants.puzzles_until_win == 0:
 		Game.win()
+		$PanelContainer.get_child(0).queue_free()
 		return
 
 	current_puzzle.queue_free()
@@ -40,3 +41,6 @@ func _on_visibility_changed() -> void:
 		panel.hide()
 		panel.get_child(0).hide()
 		panel.process_mode = Node.PROCESS_MODE_DISABLED
+
+func _on_exit_button_pressed() -> void:
+	hide()
