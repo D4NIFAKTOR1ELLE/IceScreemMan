@@ -7,10 +7,12 @@ signal puzzle_solved
 
 @onready var spawn_timer = $SpawnTimer
 @onready var holes: Array[Area2D]
+@onready var count_label: RichTextLabel = $CountLabel
 
 var score: int = 0
 
 func _ready():
+	update_text()
 	spawn_timer.wait_time = spawn_interval
 	spawn_timer.start()
 
@@ -23,6 +25,8 @@ func attempt_strike():
 	score += 1
 	if score >= target_score:
 		win_game()
+		
+	update_text()
 	return 
 
 func _on_spawn_timer_timeout():
@@ -32,6 +36,12 @@ func _on_spawn_timer_timeout():
 func win_game():
 	spawn_timer.stop()
 	puzzle_solved.emit()
+
+func update_text():
+	if score >= target_score:
+		return
+		
+	count_label.text = "[color=yellow]%d / %d[/color]" % [score, target_score]
 
 func _on_visibility_changed() -> void:
 	if visible:

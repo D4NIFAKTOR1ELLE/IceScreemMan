@@ -10,7 +10,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Node" type="Node" parent="." unique_id=1478330324]
 
 [node name="WAZZombie" parent="Node" unique_id=1521900750 instance=ExtResource("2_vblmd")]
-position = Vector2(757, 122)
+position = Vector2(769, 166)
 
 [node name="WAZZombie2" parent="Node" unique_id=882853438 instance=ExtResource("2_vblmd")]
 position = Vector2(937, 211)
@@ -22,9 +22,32 @@ position = Vector2(714, 316)
 position = Vector2(998, 399)
 
 [node name="WAZZombie5" parent="Node" unique_id=36942580 instance=ExtResource("2_vblmd")]
-position = Vector2(748, 485)
+position = Vector2(748, 442)
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=1824193922]
+
+[node name="ControlHint" type="RichTextLabel" parent="." unique_id=1044247855]
+offset_left = 127.0
+offset_right = 437.0
+offset_bottom = 56.0
+theme_override_colors/default_color = Color(0.93, 0.7161, 0.812355, 0.6117647)
+theme_override_font_sizes/normal_font_size = 27
+bbcode_enabled = true
+text = "([color=yellow]Left click[/color]) to whack
+the rats out of your car!"
+horizontal_alignment = 1
+
+[node name="CountLabel" type="RichTextLabel" parent="." unique_id=1559535244]
+offset_left = 139.0
+offset_top = 492.0
+offset_right = 449.0
+offset_bottom = 552.0
+theme_override_colors/default_color = Color(0.93, 0.7161, 0.812355, 0.6117647)
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "[color=yellow]0 / 0[/color]"
+scroll_active = false
+horizontal_alignment = 1
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

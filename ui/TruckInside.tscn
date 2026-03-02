@@ -133,10 +133,10 @@ metadata/_edit_use_anchors_ = true
 [node name="ConeButton" type="TextureButton" parent="Control" unique_id=770128226]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.6779514
-anchor_top = 0.2462908
-anchor_right = 0.7829861
-anchor_bottom = 0.51186943
+anchor_left = 0.5859375
+anchor_top = 0.24183977
+anchor_right = 0.6909722
+anchor_bottom = 0.5074184
 offset_right = -1.0
 offset_bottom = 1.0
 texture_normal = ExtResource("6_aqxix")
@@ -152,6 +152,20 @@ theme_override_colors/default_color = Color(0.93, 0.7161, 0.812355, 0.6117647)
 theme_override_font_sizes/normal_font_size = 27
 bbcode_enabled = true
 text = "<- Press ([color=yellow]W[/color]) to look through your engine."
+
+[node name="Label2" type="RichTextLabel" parent="." unique_id=651196682]
+offset_left = 840.0
+offset_top = 182.0
+offset_right = 1087.0
+offset_bottom = 350.0
+theme_override_colors/default_color = Color(0.93, 0.7161, 0.812355, 0.6117647)
+theme_override_font_sizes/normal_font_size = 27
+bbcode_enabled = true
+text = "([color=yellow]Left click[/color])
+Grab cone, grab scoops
+
+([color=yellow]Right click[/color])
+Delete topmost scoop, delete cone if empty"
 
 [connection signal="pressed" from="Control/Engine" to="." method="_on_engine_pressed"]
 [connection signal="pressed" from="Control/ConeButton" to="." method="_on_cone_button_pressed"]

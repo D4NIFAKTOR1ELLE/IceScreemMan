@@ -38,6 +38,7 @@ func handle_hit():
 		is_whacked = true
 		if whacked_texture:
 			zombie.texture = whacked_texture 
+		$AudioStreamPlayer.play()
 		retreat()
 		
 func _on_clicked():

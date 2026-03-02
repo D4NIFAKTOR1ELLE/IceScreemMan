@@ -28,6 +28,7 @@ one_shot = true
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=146292514]
 stream = ExtResource("5_t88pq")
 autoplay = true
+bus = &"Audio"
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
 [connection signal="timeout" from="ZombieTimer" to="." method="_on_zombie_timer_timeout"]

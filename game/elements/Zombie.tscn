@@ -423,5 +423,9 @@ show_percentage = false
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1368786621]
 libraries/ = SubResource("AnimationLibrary_0wwwm")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1626823143]
+volume_db = -12.772
+pitch_scale = 1.32
+
 [connection signal="mouse_entered" from="Body" to="." method="_on_body_mouse_entered"]
 [connection signal="timeout" from="DissatisfactionTimer" to="." method="_on_dissatisfaction_timer_timeout"]

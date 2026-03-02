@@ -8,6 +8,7 @@ extends Control
 @onready var requests: GridContainer = $RequestBubble/Requests
 @onready var progress_bar: ProgressBar = $ProgressBar
 @onready var animationplayer: AnimationPlayer = $AnimationPlayer
+@onready var audio: AudioStreamPlayer = $AudioStreamPlayer
 
 signal left
 
@@ -22,7 +23,10 @@ var zombies: Array[String] = [
 	"res://assets/art/zombies/ladyZombie.png",
 	"res://assets/art/zombies/zombie1.png"]
 
+
 func _ready() -> void:
+	audio.stream = load("res://assets/se/Zombie%d.mp3" % randi_range(1, 4))
+	
 	body.texture = load(zombies[randi_range(0, zombies.size() - 1)])
 	
 	animationplayer.play("spawn")
@@ -30,6 +34,8 @@ func _ready() -> void:
 	spawn()
 
 func spawn():
+	audio.play()
+	
 	for scoop in randi_range(1, 6):
 		var random_request: String = Game.current_flavour_roster.pick_random()
 		var new_request_scoop = request_scoop.duplicate()
@@ -43,6 +49,8 @@ func spawn():
 	dissatisfaction_timer.start()
 
 func leave_angrily():
+	audio.stream = load("res://assets/se/Zombiemumble.mp3")
+	audio.play()
 	Constants.sanity = Constants.sanity - 1
 	Game.truck_inside.sanity_bar.value -= 1
 	
@@ -55,6 +63,8 @@ func leave_angrily():
 	queue_free()
 
 func leave_happily():
+	audio.stream = load("res://assets/se/HappyZombie%d.mp3" % randi_range(1, 2))
+	audio.play()
 	dissatisfaction_timer.stop()
 	Constants.cone_in_hand = false
 	Constants.new_cone.queue_free()

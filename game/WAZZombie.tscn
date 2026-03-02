@@ -1,11 +1,18 @@
 [gd_scene format=3 uid="uid://cyugp6iy8wy81"]
 
 [ext_resource type="Script" uid="uid://ds7qwlb45eacf" path="res://game/elements/whack_a_zombie_zombie.gd" id="1_cpoo3"]
-[ext_resource type="Texture2D" uid="uid://dt7hq3tfpvrem" path="res://assets/art/Placeholder/PlaceHolderZombieHole.png" id="2_rup3o"]
+[ext_resource type="Texture2D" uid="uid://d0qecuwsnu28p" path="res://assets/art/Placeholder/rat.png" id="2_bcqyt"]
 [ext_resource type="Texture2D" uid="uid://j6khq44w3qv0" path="res://assets/art/Placeholder/PlaceHolderZombieHead.png" id="3_bcqyt"]
+[ext_resource type="Texture2D" uid="uid://ca1pdsw3kds7b" path="res://assets/art/Placeholder/rat_whacked.png" id="3_bljw3"]
+[ext_resource type="AudioStream" uid="uid://cxf1apafuqd4m" path="res://assets/se/freesound_community-squeaky-toy-1-6059.mp3" id="6_bljw3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_glgos"]
 size = Vector2(70, 70)
+
+[sub_resource type="Gradient" id="Gradient_bcqyt"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bljw3"]
+gradient = SubResource("Gradient_bcqyt")
 
 [sub_resource type="Animation" id="Animation_bl6mr"]
 resource_name = "PopUp"
@@ -45,19 +52,30 @@ _data = {
 
 [node name="WAZZombie" type="Area2D" unique_id=1521900750]
 script = ExtResource("1_cpoo3")
+normal_texture = ExtResource("2_bcqyt")
+whacked_texture = ExtResource("3_bljw3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=166106746]
 position = Vector2(0.75, 0)
 shape = SubResource("RectangleShape2D_glgos")
 
-[node name="ZombieHoleSprite" type="Sprite2D" parent="." unique_id=215870453]
+[node name="ZombieHoleSprite" type="TextureRect" parent="." unique_id=934880160]
 clip_children = 1
-texture = ExtResource("2_rup3o")
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 54.0
+offset_bottom = 54.0
+texture = SubResource("GradientTexture2D_bljw3")
+expand_mode = 2
 
-[node name="ZombieSprite" type="Sprite2D" parent="ZombieHoleSprite" unique_id=1632376567]
-position = Vector2(0, 150)
+[node name="ZombieSprite" type="TextureRect" parent="ZombieHoleSprite" unique_id=530428100]
+layout_mode = 0
+offset_top = 150.0
+offset_right = 128.0
+offset_bottom = 278.0
 scale = Vector2(0.5, 0.5234375)
 texture = ExtResource("3_bcqyt")
+expand_mode = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=335507708]
 libraries/ = SubResource("AnimationLibrary_cpoo3")
@@ -69,3 +87,6 @@ offset_left = -48.0
 offset_top = -50.0
 offset_right = 51.0
 offset_bottom = 48.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2012472596]
+stream = ExtResource("6_bljw3")
