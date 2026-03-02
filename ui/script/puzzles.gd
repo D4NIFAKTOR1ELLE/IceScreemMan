@@ -10,7 +10,7 @@ var current_puzzle: Node = null
 
 func initialise():
 	puzzles = [sliding_puzzle, fuse_puzzle, whack_a_mole_puzzle]
-	#puzzles.shuffle()
+	puzzles.shuffle()
 	
 	choose()
 	
@@ -25,6 +25,7 @@ func on_puzzle_beaten():
 	
 	if Constants.puzzles_until_win == 0:
 		Game.win()
+		return
 
 	current_puzzle.queue_free()
 
@@ -33,9 +34,9 @@ func on_puzzle_beaten():
 func _on_visibility_changed() -> void:
 	if visible:
 		panel.show()
-		#panel.get_child(0).show()
+		panel.get_child(0).show()
 		panel.process_mode = Node.PROCESS_MODE_INHERIT
 	else:
 		panel.hide()
-		#panel.get_child(0).hide()
+		panel.get_child(0).hide()
 		panel.process_mode = Node.PROCESS_MODE_DISABLED

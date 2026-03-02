@@ -3,12 +3,7 @@
 [ext_resource type="Script" uid="uid://cppr7vcxs4knw" path="res://game/minigame_whack_a_mole.gd" id="1_vblmd"]
 [ext_resource type="PackedScene" uid="uid://cyugp6iy8wy81" path="res://game/WAZZombie.tscn" id="2_vblmd"]
 
-[node name="MinigameWhackAMole" type="Control" unique_id=800698821]
-layout_mode = 3
-anchor_left = -0.0017361111
-anchor_top = -0.0030864198
-anchor_right = 0.45225695
-anchor_bottom = 1.0030864
+[node name="MinigameWhackAMole" type="Node2D" unique_id=555534220]
 script = ExtResource("1_vblmd")
 metadata/_edit_use_anchors_ = true
 

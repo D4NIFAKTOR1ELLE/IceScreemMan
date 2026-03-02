@@ -4,8 +4,8 @@ extends Area2D
 @onready var zombie = $ZombieHoleSprite/ZombieSprite
 @onready var hit_button = $TextureButton
 
-@export var normal_texture: Texture2D
-@export var whacked_texture: Texture2D
+@export var normal_texture: Texture2D = preload("res://assets/art/Placeholder/PlaceHolderZombieHead.png")
+@export var whacked_texture: Texture2D = preload("res://assets/art/Placeholder/PlaceHolderNumber1.png")
 
 var is_vulnerable = false
 var is_whacked = false

@@ -71,4 +71,4 @@ func check_win() -> bool:
 
 func win():
 	puzzle_solved.emit()
-	print("win")
+	self.queue_free()

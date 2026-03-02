@@ -171,7 +171,6 @@ func _check_win():
 	win_label.show()
 	puzzle_solved.emit()
 
-
 func _format_value(v):
 	if v == int(v):
 		return str(int(v)) + "A"

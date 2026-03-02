@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 func load_data():
 	$TextureRect/MarginContainer/VBoxContainer/SanityContainer/Score.text = "%d / %d" % [Constants.sanity, Constants.max_sanity] 
