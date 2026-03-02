@@ -3,6 +3,28 @@
 [ext_resource type="Theme" uid="uid://on8hmefb85mk" path="res://ui/script/TruckTheme.tres" id="1_2orec"]
 [ext_resource type="Script" uid="uid://u656pi8oxcjm" path="res://ui/script/truck_inside.gd" id="1_kba1j"]
 [ext_resource type="Texture2D" uid="uid://cvlbjilhixub" path="res://assets/art/extra/sanity_box.png" id="3_xp5ev"]
+[ext_resource type="Texture2D" uid="uid://cl0hy2n4lg6hl" path="res://assets/art/extra/engine.png" id="4_xp5ev"]
+[ext_resource type="Texture2D" uid="uid://d3oxbn82xoxrh" path="res://assets/art/extra/engine_hover.png" id="5_1e45c"]
+[ext_resource type="Texture2D" uid="uid://blqlbwno5bysm" path="res://assets/art/extra/get_cone.png" id="6_aqxix"]
+[ext_resource type="Texture2D" uid="uid://ja77kqgad3i6" path="res://assets/art/extra/get_cone_hover.png" id="7_quuv6"]
+
+[sub_resource type="Gradient" id="Gradient_1e45c"]
+offsets = PackedFloat32Array(0, 0.45180723, 1)
+colors = PackedColorArray(0.55328, 0.5096, 0.56, 1, 0.30806345, 0.27662453, 0.312928, 1, 0.30887666, 0.28224325, 0.3776342, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_igbbj"]
+gradient = SubResource("Gradient_1e45c")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Gradient" id="Gradient_mb3o5"]
+offsets = PackedFloat32Array(0, 0.9578313)
+colors = PackedColorArray(0.45678598, 0.41594487, 0.46308905, 1, 0.30806345, 0.27662453, 0.312928, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xp5ev"]
+gradient = SubResource("Gradient_mb3o5")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
 
 [sub_resource type="Theme" id="Theme_kba1j"]
 
@@ -22,7 +44,17 @@ mouse_filter = 2
 theme = ExtResource("1_2orec")
 metadata/_edit_use_anchors_ = true
 
-[node name="Panel" type="Panel" parent="Control" unique_id=1531100834]
+[node name="Panel2" type="TextureRect" parent="Control" unique_id=365301270]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5034722
+anchor_right = 1.0008681
+anchor_bottom = 0.9643917
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_igbbj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="TextureRect" parent="Control" unique_id=2074216466]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.0026041667
@@ -30,15 +62,7 @@ anchor_top = 0.49703264
 anchor_right = 1.0
 anchor_bottom = 0.96735907
 mouse_filter = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Panel2" type="Panel" parent="Control" unique_id=351633207]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5034722
-anchor_right = 1.0008681
-anchor_bottom = 0.9643917
-mouse_filter = 2
+texture = SubResource("GradientTexture2D_xp5ev")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sanity" type="Label" parent="Control" unique_id=2048519722]
@@ -55,22 +79,24 @@ metadata/_edit_use_anchors_ = true
 [node name="TimeButton" type="Label" parent="Control" unique_id=1309789169]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5355903
-anchor_top = 0.25074184
-anchor_right = 0.6032986
-anchor_bottom = 0.305638
+anchor_left = 0.27256945
+anchor_top = 0.6498516
+anchor_right = 0.3402778
+anchor_bottom = 0.7121662
 text = "Time"
 metadata/_edit_use_anchors_ = true
 
 [node name="Time" type="Label" parent="Control" unique_id=1147665987]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5668403
-anchor_top = 0.32344213
-anchor_right = 0.65878475
-anchor_bottom = 0.40977746
+anchor_left = 0.27604166
+anchor_top = 0.72106826
+anchor_right = 0.41499996
+anchor_bottom = 0.84244806
+offset_right = -27.079956
+offset_bottom = -11.809998
 theme = ExtResource("1_2orec")
-theme_override_font_sizes/font_size = 41
+theme_override_font_sizes/font_size = 69
 text = "00:00"
 metadata/_edit_use_anchors_ = true
 
@@ -101,9 +127,9 @@ show_percentage = false
 [node name="Flavours" type="GridContainer" parent="Control" unique_id=1129066676]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5659722
+anchor_left = 0.5217014
 anchor_top = 0.53264093
-anchor_right = 0.9418403
+anchor_right = 0.9600694
 anchor_bottom = 0.92284864
 offset_top = 3.0517578e-05
 theme_override_constants/h_separation = 6
@@ -111,27 +137,30 @@ theme_override_constants/v_separation = 6
 columns = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="Engine" type="Button" parent="Control" unique_id=1315931439]
-layout_mode = 0
-offset_left = 102.0
-offset_top = 389.0
-offset_right = 377.0
-offset_bottom = 579.0
+[node name="Engine" type="TextureButton" parent="Control" unique_id=1259133543]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.024305556
+anchor_top = 0.5281899
+anchor_right = 0.25868055
+anchor_bottom = 0.92878336
+texture_normal = ExtResource("4_xp5ev")
+texture_hover = ExtResource("5_1e45c")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
-[node name="Ignition" type="Button" parent="Control" unique_id=1474836018]
-layout_mode = 0
-offset_left = 519.0
-offset_top = 507.0
-offset_right = 605.74054
-offset_bottom = 578.3667
-
-[node name="ConeButton" type="Button" parent="Control" unique_id=130818121]
-layout_mode = 0
-offset_left = 899.0
-offset_top = 220.0
-offset_right = 991.0
-offset_bottom = 333.0
+[node name="ConeButton" type="TextureButton" parent="Control" unique_id=770128226]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6779514
+anchor_top = 0.2462908
+anchor_right = 0.7829861
+anchor_bottom = 0.51186943
+offset_right = -1.0
+offset_bottom = 1.0
+texture_normal = ExtResource("6_aqxix")
+texture_hover = ExtResource("7_quuv6")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Control/Engine" to="." method="_on_engine_pressed"]
-[connection signal="pressed" from="Control/Ignition" to="." method="_on_ignition_pressed"]
 [connection signal="pressed" from="Control/ConeButton" to="." method="_on_cone_button_pressed"]

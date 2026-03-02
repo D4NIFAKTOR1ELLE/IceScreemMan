@@ -25,6 +25,10 @@ Game="*uid://bghqkshvrsfku"
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
+[gui]
+
+theme/custom_font="uid://c0e4wih8f2tt0"
+
 [input]
 
 right_click={
