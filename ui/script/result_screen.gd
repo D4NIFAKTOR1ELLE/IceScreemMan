@@ -3,7 +3,7 @@ extends CanvasLayer
 func load_data():
 	$TextureRect/MarginContainer/VBoxContainer/SanityContainer/Score.text = "%d / %d" % [Constants.sanity, Constants.max_sanity] 
 	$TextureRect/MarginContainer/VBoxContainer/TimerContainer/Score.text = "%02d:%02d" % [Game.gametimer.time_left / 60, fmod(Game.gametimer.time_left, 60)]
-	$TextureRect/MarginContainer/VBoxContainer/ScoreContainer/Label2.text = "%d / 3 Rats" [calculate_stars()]
+	$TextureRect/MarginContainer/VBoxContainer/ScoreContainer/Label2.text = "%d / 3 Rats" % [calculate_stars()]
 	update_stars()
 	
 func update_stars() -> void:

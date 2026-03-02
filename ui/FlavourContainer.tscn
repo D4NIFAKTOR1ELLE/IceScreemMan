@@ -2,7 +2,22 @@
 
 [ext_resource type="Texture2D" uid="uid://btjjqxolgokax" path="res://assets/art/extra/ice_cream_container.png" id="1_khpur"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khpur"]
+bg_color = Color(0.19553718, 0.1361045, 0.21708363, 1)
+
 [node name="TextureButton" type="TextureButton" unique_id=652758027]
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource("1_khpur")
+
+[node name="Label" type="Label" parent="." unique_id=950740614]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 106.0
+offset_right = 151.0
+offset_bottom = 129.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_khpur")
+text = "NONE"
+horizontal_alignment = 1
+vertical_alignment = 2

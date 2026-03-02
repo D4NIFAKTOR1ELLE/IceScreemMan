@@ -87,3 +87,15 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = SubResource("PlaceholderTexture2D_8b1d2")
+
+[node name="ControlHint" type="RichTextLabel" parent="." unique_id=638338618]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 509.0
+offset_right = 408.0
+offset_bottom = 566.0
+theme_override_colors/default_color = Color(0.93, 0.7161, 0.812355, 0.6117647)
+theme_override_font_sizes/normal_font_size = 27
+bbcode_enabled = true
+text = "([color=yellow]Left click[/color]) a puzzle piece to slide it to the next free space."
+horizontal_alignment = 1

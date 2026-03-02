@@ -168,8 +168,8 @@ text = "0 / 3"
 [node name="Label2" type="RichTextLabel" parent="." unique_id=651196682]
 offset_left = 840.0
 offset_top = 182.0
-offset_right = 1087.0
-offset_bottom = 350.0
+offset_right = 1088.0
+offset_bottom = 337.0
 theme_override_colors/default_color = Color(0.93, 0.7161, 0.812355, 0.6117647)
 theme_override_font_sizes/normal_font_size = 27
 bbcode_enabled = true
@@ -177,7 +177,7 @@ text = "([color=yellow]Left click[/color])
 Grab cone, grab scoops
 
 ([color=yellow]Right click[/color])
-Delete topmost scoop, delete cone if empty"
+Delete scoop/cone"
 
 [connection signal="pressed" from="Control/Engine" to="." method="_on_engine_pressed"]
 [connection signal="pressed" from="Control/ConeButton" to="." method="_on_cone_button_pressed"]

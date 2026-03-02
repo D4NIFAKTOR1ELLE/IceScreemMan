@@ -18,6 +18,7 @@ func initialise(flavour_array: Array[String]):
 	
 	for button in $Control/Flavours.get_children():
 		button.name = flavour_array[index]
+		button.get_node("Label").text = button.name
 		button.self_modulate = Constants.flavours.get(flavour_array[index])
 		button.connect("pressed", _on_flavour_pressed.bind(button))
 		index = index + 1
