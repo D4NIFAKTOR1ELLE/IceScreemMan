@@ -54,12 +54,19 @@ top_level = true
 position = Vector2(1.5, -0.5)
 shape = SubResource("RectangleShape2D_bl6mr")
 
-[node name="ZombieHoleSprite" type="Sprite2D" parent="." unique_id=516041341]
+[node name="ZombieHoleSprite" type="TextureRect" parent="." unique_id=2130486799]
 clip_children = 1
+offset_left = -61.0
+offset_top = -65.0
+offset_right = 67.0
+offset_bottom = 63.0
 texture = ExtResource("1_llg31")
 
-[node name="ZombieSprite" type="Sprite2D" parent="ZombieHoleSprite" unique_id=463103114]
-position = Vector2(0, 150)
+[node name="ZombieSprite" type="TextureRect" parent="ZombieHoleSprite" unique_id=624079200]
+layout_mode = 0
+offset_top = 150.0
+offset_right = 128.0
+offset_bottom = 278.0
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_1rrj4")
 
