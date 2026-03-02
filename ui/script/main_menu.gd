@@ -6,7 +6,6 @@ func _ready() -> void:
 func _onStartstory_button_pressed() -> void:
 	pass # Replace with function body.
 
-
 func _on_startnostory_pressed() -> void:
 	Transition.fade_in(3)
 	await Transition.transition_anim.animation_finished

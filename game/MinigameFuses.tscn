@@ -3,22 +3,27 @@
 [ext_resource type="Script" uid="uid://cysbhnok5qm0d" path="res://game/minigame_fuses.gd" id="1_357ut"]
 [ext_resource type="Script" uid="uid://bkowv0s8mdj4w" path="res://game/elements/FuseDiagram.gd" id="2_e0hxx"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0hxx"]
+bg_color = Color(0.38613346, 0.31630158, 0.39995775, 1)
+
 [node name="FuseMinigame" type="Control" unique_id=722900997]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -9.0
 offset_top = 19.0
-offset_right = 552.0
-offset_bottom = 675.0
+offset_right = 515.0
+offset_bottom = 648.0
 script = ExtResource("1_357ut")
 
 [node name="SlotGrid" type="GridContainer" parent="." unique_id=2099201573]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.14438502
-anchor_top = 0.52286583
-anchor_right = 0.49019608
-anchor_bottom = 0.8238938
+anchor_left = 0.15839694
+anchor_top = 0.6112805
+anchor_right = 0.6093773
+anchor_bottom = 0.9039634
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
 metadata/_edit_use_anchors_ = true
 
 [node name="FuseHolder" type="Node2D" parent="." unique_id=511068142]
@@ -28,50 +33,63 @@ metadata/_edit_use_anchors_ = true
 [node name="WinLabel" type="Label" parent="." unique_id=936906678]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.4402852
-anchor_top = 0.39634147
-anchor_right = 0.94586974
-anchor_bottom = 0.46036586
-offset_left = 37.0
-offset_top = 2.0
-offset_right = -0.6329346
-offset_bottom = 2.0
+anchor_left = 0.53435117
+anchor_top = 0.4847561
+anchor_right = 0.9681171
+anchor_bottom = 0.5487805
 theme_override_colors/font_color = Color(0.3, 1, 0.4, 1)
 theme_override_font_sizes/font_size = 28
 text = "✔  All fuses correct!"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="." unique_id=1200473965]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.07308378
-anchor_top = 0.39481708
-anchor_right = 0.3946163
-anchor_bottom = 0.45799088
-offset_left = 37.0
-offset_top = 2.0
-offset_right = 37.000015
-offset_bottom = 2.0
+anchor_left = 0.122137405
+anchor_top = 0.48489666
+anchor_right = 0.44366997
+anchor_bottom = 0.5627981
 theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_e0hxx")
 text = "Show Diagram"
+metadata/_edit_use_anchors_ = true
 
 [node name="FuseDiagram" type="Control" parent="." unique_id=1892522400]
 layout_mode = 1
-anchor_left = 0.13547236
-anchor_top = 0.022865854
-anchor_right = 0.13547236
-anchor_bottom = 0.022865854
+anchor_left = 0.13167939
+anchor_top = 0.028616853
+anchor_right = 0.64122134
+anchor_bottom = 0.40161744
 script = ExtResource("2_e0hxx")
 GRID_COLS = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Background" type="ColorRect" parent="FuseDiagram" unique_id=934984322]
-layout_mode = 0
-offset_top = -2.0
-offset_right = 258.0
-offset_bottom = 234.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.02996255
+anchor_top = 0.004262259
+anchor_right = 0.928839
+anchor_bottom = 1.1550722
+offset_bottom = 1.5258789e-05
 mouse_filter = 2
-color = Color(0.1, 0.1, 0.13, 1)
+color = Color(0.18290097, 0.18291473, 0.22399125, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="RichTextLabel" parent="." unique_id=1981696415]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 384.0
+offset_right = 541.0
+offset_bottom = 540.0
+theme_override_colors/default_color = Color(0.93, 0.7161, 0.812355, 0.6117647)
+theme_override_font_sizes/normal_font_size = 27
+bbcode_enabled = true
+text = "Drag and drop
+the [color=yellow]fuses[/color] above
+<- into the [color=yellow]slots[/color]
+on the left."
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

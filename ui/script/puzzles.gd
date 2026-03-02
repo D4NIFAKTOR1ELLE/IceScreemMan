@@ -9,8 +9,8 @@ var puzzles: Array
 var current_puzzle: Node = null
 
 func initialise():
-	puzzles = [sliding_puzzle, fuse_puzzle, whack_a_mole_puzzle]
-	puzzles.shuffle()
+	puzzles = [sliding_puzzle, whack_a_mole_puzzle, fuse_puzzle]
+	#puzzles.shuffle()
 	
 	choose()
 	
@@ -21,6 +21,8 @@ func choose():
 	panel.add_child(current_puzzle)
 	
 func on_puzzle_beaten():
+	hide()
+	
 	Constants.puzzles_until_win -= 1
 	
 	if Constants.puzzles_until_win == 0:
