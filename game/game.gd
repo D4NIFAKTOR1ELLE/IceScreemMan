@@ -50,9 +50,14 @@ func win():
 	for zombie in zombie_window.zombie_container.get_children():
 		zombie.queue_free()
 
+	Transition.fade_in(2)
+	await Transition.transition_anim.animation_finished
+
 	var new_result_screen = result_screen.instantiate()
 	new_result_screen.load_data()
 	get_tree().change_scene_to_node(new_result_screen)
+
+	Transition.fade_out(0.5)
 
 func lose():
 	gametimer.stop()
@@ -60,10 +65,15 @@ func lose():
 	puzzle_window.panel.hide()
 	truck_inside.set_process_input(false)
 	
+	Transition.fade_in(2)
+	await Transition.transition_anim.animation_finished
+	
 	for zombie in zombie_window.zombie_container.get_children():
 		zombie.queue_free()
 	
 	get_tree().change_scene_to_node(lose_screen.instantiate())
+
+	Transition.fade_out(0.5)
 
 func _on_game_timer_timeout() -> void:
 	win()
