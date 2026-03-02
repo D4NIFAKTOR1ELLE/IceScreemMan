@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://cyugp6iy8wy81"]
+
+[ext_resource type="Script" uid="uid://ds7qwlb45eacf" path="res://game/elements/whack_a_zombie_zombie.gd" id="1_cpoo3"]
+[ext_resource type="Texture2D" uid="uid://dt7hq3tfpvrem" path="res://assets/art/Placeholder/PlaceHolderZombieHole.png" id="2_rup3o"]
+[ext_resource type="Texture2D" uid="uid://j6khq44w3qv0" path="res://assets/art/Placeholder/PlaceHolderZombieHead.png" id="3_bcqyt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glgos"]
+size = Vector2(70, 70)
+
+[sub_resource type="Animation" id="Animation_bl6mr"]
+resource_name = "PopUp"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ZombieHoleSprite/ZombieSprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 150), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_es6tj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ZombieHoleSprite/ZombieSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 150)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cpoo3"]
+_data = {
+&"PopUp": SubResource("Animation_bl6mr"),
+&"RESET": SubResource("Animation_es6tj")
+}
+
+[node name="WAZZombie" type="Area2D" unique_id=1521900750]
+script = ExtResource("1_cpoo3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=166106746]
+position = Vector2(0.75, 0)
+shape = SubResource("RectangleShape2D_glgos")
+
+[node name="ZombieHoleSprite" type="TextureRect" parent="." unique_id=1966572717]
+clip_children = 1
+offset_left = -61.0
+offset_top = -65.0
+offset_right = 67.0
+offset_bottom = 63.0
+texture = ExtResource("2_rup3o")
+
+[node name="ZombieSprite" type="TextureRect" parent="ZombieHoleSprite" unique_id=932127686]
+layout_mode = 0
+offset_top = 150.0
+offset_right = 128.0
+offset_bottom = 278.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_bcqyt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=335507708]
+libraries/ = SubResource("AnimationLibrary_cpoo3")
+
+[node name="Timer" type="Timer" parent="." unique_id=231008202]
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=733161091]
+offset_left = -48.0
+offset_top = -50.0
+offset_right = 51.0
+offset_bottom = 48.0

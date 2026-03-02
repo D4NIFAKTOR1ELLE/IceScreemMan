@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d07fm1mkhhav6"]
 
 [ext_resource type="Script" uid="uid://cppr7vcxs4knw" path="res://game/minigame_whack_a_mole.gd" id="1_vblmd"]
-[ext_resource type="PackedScene" uid="uid://b7muxyohu0fan" path="res://game/elements/WhackAZombieZombie.tscn" id="2_vblmd"]
+[ext_resource type="PackedScene" uid="uid://cyugp6iy8wy81" path="res://game/WAZZombie.tscn" id="2_vblmd"]
 
 [node name="MinigameWhackAMole" type="Control" unique_id=800698821]
 layout_mode = 3
@@ -14,8 +14,20 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Node" type="Node" parent="." unique_id=526969367]
 
-[node name="WhackAZombieZombie" parent="Node" unique_id=793144184 instance=ExtResource("2_vblmd")]
-position = Vector2(834, 88)
+[node name="WAZZombie" parent="Node" unique_id=1521900750 instance=ExtResource("2_vblmd")]
+position = Vector2(757, 122)
+
+[node name="WAZZombie2" parent="Node" unique_id=882853438 instance=ExtResource("2_vblmd")]
+position = Vector2(937, 211)
+
+[node name="WAZZombie3" parent="Node" unique_id=1570539072 instance=ExtResource("2_vblmd")]
+position = Vector2(714, 316)
+
+[node name="WAZZombie4" parent="Node" unique_id=1864520172 instance=ExtResource("2_vblmd")]
+position = Vector2(998, 399)
+
+[node name="WAZZombie5" parent="Node" unique_id=36942580 instance=ExtResource("2_vblmd")]
+position = Vector2(748, 485)
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=1824193922]
 
