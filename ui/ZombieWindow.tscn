@@ -4,11 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://b018kce6gg0k7" path="res://assets/art/extra/background_outside_blur.png" id="2_gi2vt"]
 [ext_resource type="Texture2D" uid="uid://troeflg77epk" path="res://assets/art/extra/window_mask.png" id="2_xrwar"]
 
-[node name="ZombieWindow" type="CanvasLayer" unique_id=1651551599]
+[node name="ZombieWindow" type="Control" unique_id=1494242549]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_gi2vt")
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=344561327]
 clip_children = 1
+layout_mode = 0
 offset_left = 2.0
 offset_right = 599.0
 offset_bottom = 365.0
@@ -32,6 +35,7 @@ anchors_preset = -1
 anchor_top = 0.005479452
 anchor_right = 1.0284758
 anchor_bottom = 0.9945205
+offset_bottom = 3.0517578e-05
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/h_separation = 180

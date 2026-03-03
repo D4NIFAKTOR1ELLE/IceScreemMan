@@ -46,7 +46,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=833682793]
 stream = ExtResource("3_y1vir")
-volume_db = -11.86
+volume_db = -23.72
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

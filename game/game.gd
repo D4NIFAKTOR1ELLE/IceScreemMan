@@ -6,7 +6,7 @@ extends CanvasLayer
 @onready var music: AudioStreamPlayer = $Music
 @onready var timer_text: Label = $TruckInside/Control/Time
 @onready var truck_inside: CanvasLayer = $TruckInside
-@onready var zombie_window: CanvasLayer = $ZombieWindow
+@onready var zombie_window: Control = $TruckInside/Control/ZombieWindow
 @onready var puzzle_window: CanvasLayer = $Puzzles
 
 var current_flavour_roster: Array[String] = []
@@ -49,10 +49,10 @@ func pick_flavours():
 	truck_inside.initialise(current_flavour_roster)
 
 func win():
+	truck_inside.set_process_input(false)
 	gametimer.stop()
 	zombietimer.stop()
 	puzzle_window.panel.hide()
-	truck_inside.set_process_input(false)
 	
 	for zombie in zombie_window.zombie_container.get_children():
 		zombie.queue_free()
@@ -83,7 +83,7 @@ func lose():
 	Transition.fade_out(0.5)
 
 func _on_game_timer_timeout() -> void:
-	win()
+	lose()
 
 func _on_zombie_timer_timeout() -> void:
 	zombie_window.spawn_zombie()

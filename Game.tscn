@@ -2,14 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://c15mnuq4y1lrw" path="res://ui/TruckInside.tscn" id="1_wbfu4"]
 [ext_resource type="Script" uid="uid://cjxcpil7s48nq" path="res://game/game.gd" id="1_xkndl"]
-[ext_resource type="PackedScene" uid="uid://cbb0c5shpy67j" path="res://ui/ZombieWindow.tscn" id="2_sb48q"]
 [ext_resource type="PackedScene" uid="uid://defvlperpo7m4" path="res://ui/Puzzles.tscn" id="3_u44n3"]
 [ext_resource type="AudioStream" uid="uid://d1khk2u8qvljg" path="res://assets/se/CreepyIceCreamTruckMusic.mp3" id="5_t88pq"]
 
 [node name="Game" type="CanvasLayer" unique_id=397863996]
 script = ExtResource("1_xkndl")
-
-[node name="ZombieWindow" parent="." unique_id=1651551599 instance=ExtResource("2_sb48q")]
 
 [node name="TruckInside" parent="." unique_id=360068417 instance=ExtResource("1_wbfu4")]
 
@@ -28,7 +25,6 @@ one_shot = true
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=146292514]
 stream = ExtResource("5_t88pq")
 autoplay = true
-bus = &"Audio"
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
 [connection signal="timeout" from="ZombieTimer" to="." method="_on_zombie_timer_timeout"]
