@@ -6,6 +6,10 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_24mw7"]
 
+[sub_resource type="FontVariation" id="FontVariation_y1vir"]
+spacing_top = 5
+spacing_bottom = -5
+
 [node name="Puzzles" type="CanvasLayer" unique_id=2122768542]
 layer = 3
 visible = false
@@ -30,10 +34,14 @@ metadata/_edit_use_anchors_ = true
 
 [node name="ExitButton" type="Button" parent="." unique_id=1192948891]
 anchors_preset = -1
-anchor_left = 0.9166667
-anchor_top = 0.040123455
-anchor_right = 0.9540149
-anchor_bottom = 0.10815067
+anchor_left = 0.90625
+anchor_top = 0.057098776
+anchor_right = 0.9522788
+anchor_bottom = 0.14660496
+theme_override_colors/font_color = Color(0.88, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_y1vir")
+theme_override_font_sizes/font_size = 38
+text = "X"
 metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=833682793]
