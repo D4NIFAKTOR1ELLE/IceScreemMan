@@ -9,50 +9,26 @@ extends CanvasLayer
 @onready var zombie_window: Control = $TruckInside/Control/ZombieWindow
 @onready var puzzle_window: CanvasLayer = $Puzzles
 
-var current_flavour_roster: Array[String] = []
-
 @onready var start_screen := preload("res://ui/MainMenu.tscn")
 @onready var result_screen := preload("res://ui/ResultScreen.tscn")
 @onready var win_screen := preload("res://ui/Win_Screen.tscn")
 @onready var lose_screen := preload("res://ui/Lose_Screen.tscn")
 
 func launch_game():
-	current_flavour_roster.clear()
-	if Constants.new_cone:
-		Constants.new_cone.free()
-	for child in puzzle_window.panel.get_children():
-		child.free()
-	pick_flavours()
+	await Constants.reset_game()
 	
-	zombie_window.zombie_amount = 0
-	truck_inside.parts_repaired.text = "0 / 3"
-	Constants.sanity = Constants.max_sanity
-	Constants.puzzles_until_win = 3
-	truck_inside.sanity_overlay.size.x = 70 * Constants.max_sanity
-	truck_inside.sanity_bar.max_value = Constants.max_sanity
-	truck_inside.sanity_bar.value = Constants.max_sanity
-	truck_inside.sanity_bar.size = truck_inside.sanity_overlay.size 
+	truck_inside.initialise()
 	puzzle_window.initialise()
+	zombie_window.initialise()
 	
-	set_process_input(true)
-	truck_inside.set_process_input(true)
 	zombietimer.start()
 	gametimer.start()
 
-func pick_flavours():
-	var flavours: Array[String] = Constants.flavour_selection.duplicate()
-	flavours.shuffle()
-	
-	for i in range(6):
-		current_flavour_roster.append(flavours.pop_back())
-	
-	truck_inside.initialise(current_flavour_roster)
-
 func win():
 	truck_inside.set_process_input(false)
-	gametimer.stop()
+	gametimer.paused = true
 	zombietimer.stop()
-	puzzle_window.panel.hide()
+	puzzle_window.hide()
 	
 	for zombie in zombie_window.zombie_container.get_children():
 		zombie.queue_free()
@@ -61,16 +37,16 @@ func win():
 	await Transition.transition_anim.animation_finished
 
 	var new_result_screen = result_screen.instantiate()
-	new_result_screen.load_data()
+	await new_result_screen.load_data()
 	get_tree().change_scene_to_node(new_result_screen)
 
 	Transition.fade_out(0.5)
 
 func lose():
+	truck_inside.set_process_input(false)
 	gametimer.stop()
 	zombietimer.stop()
-	puzzle_window.panel.hide()
-	truck_inside.set_process_input(false)
+	puzzle_window.hide()
 	
 	Transition.fade_in(2)
 	await Transition.transition_anim.animation_finished
@@ -83,7 +59,7 @@ func lose():
 	Transition.fade_out(0.5)
 
 func _on_game_timer_timeout() -> void:
-	lose()
+	await lose()
 
 func _on_zombie_timer_timeout() -> void:
 	zombie_window.spawn_zombie()

@@ -4,6 +4,9 @@ extends Control
 
 var zombie_amount: int = 0
 
+func initialise():
+	zombie_amount = 0
+
 func spawn_zombie():
 	if zombie_amount >= 3:
 		return

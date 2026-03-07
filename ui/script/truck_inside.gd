@@ -6,7 +6,14 @@ extends CanvasLayer
 @onready var flavour_button = preload("res://ui/FlavourContainer.tscn")
 @onready var parts_repaired = $PartsRepaired
 
-func initialise(flavour_array: Array[String]):
+var new_cone: Cone
+
+func initialise():
+	if new_cone:
+		new_cone.free()
+		
+	var flavour_array = Constants.current_flavour_roster
+	
 	var index: int = 0
 	
 	for child in $Control/Flavours.get_children():
@@ -23,6 +30,14 @@ func initialise(flavour_array: Array[String]):
 		button.connect("pressed", _on_flavour_pressed.bind(button))
 		index = index + 1
 
+	parts_repaired.text = "0 / 3"
+	sanity_overlay.size.x = 70 * Constants.max_sanity
+	sanity_bar.max_value = Constants.max_sanity
+	sanity_bar.value = Constants.max_sanity
+	sanity_bar.size = sanity_overlay.size 
+	
+	set_process_input(true)
+
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("open_engine"):
 		_on_engine_pressed()
@@ -30,17 +45,14 @@ func _input(event: InputEvent) -> void:
 func _on_engine_pressed() -> void:
 	Game.puzzle_window.visible = !Game.puzzle_window.visible
 
-func _on_ignition_pressed() -> void:
-	pass # Replace with function body.
-
 func _on_flavour_pressed(flavour_name: Node):
-	if Constants.new_cone:
-		Constants.new_cone.add_scoop(flavour_name)
+	if new_cone:
+		new_cone.add_scoop(flavour_name)
 
 func _on_cone_button_pressed() -> void:
-	Constants.new_cone = Constants.cone.instantiate()
-
-	$Control.add_child(Constants.new_cone)
-	
-	Constants.new_cone.initialise()
 	Constants.cone_in_hand = true
+	new_cone = Constants.cone.instantiate()
+
+	$Control.add_child(new_cone)
+	
+	new_cone.initialise()

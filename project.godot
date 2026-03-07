@@ -13,6 +13,7 @@ config_version=5
 config/name="Ice Screem Man"
 run/main_scene="uid://c3hotr6bulesh"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
 
 [audio]
@@ -27,8 +28,7 @@ Transition="*uid://cqov7dmub3q0d"
 
 [display]
 
-window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/stretch/aspect="ignore"
 
 [gui]
 

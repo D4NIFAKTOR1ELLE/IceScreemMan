@@ -23,7 +23,6 @@ var zombies: Array[String] = [
 	"res://assets/art/zombies/ladyZombie.png",
 	"res://assets/art/zombies/zombie1.png"]
 
-
 func _ready() -> void:
 	audio.stream = load("res://assets/se/Zombie%d.mp3" % randi_range(1, 4))
 	
@@ -37,7 +36,7 @@ func spawn():
 	audio.play()
 	
 	for scoop in randi_range(1, 6):
-		var random_request: String = Game.current_flavour_roster.pick_random()
+		var random_request: String = Constants.current_flavour_roster.pick_random()
 		var new_request_scoop = request_scoop.duplicate()
 
 		request.append(random_request)
@@ -70,7 +69,7 @@ func leave_happily():
 	audio.play()
 	dissatisfaction_timer.stop()
 	Constants.cone_in_hand = false
-	Constants.new_cone.queue_free()
+	Game.truck_inside.new_cone.queue_free()
 	
 	animationplayer.play("leave_happy")
 	await animationplayer.animation_finished
@@ -88,11 +87,11 @@ func _on_dissatisfaction_timer_timeout() -> void:
 	leave_angrily()
 
 func _on_body_mouse_entered() -> void:
-	if Constants.cone_in_hand and !Constants.new_cone.flavours_in_scoop.is_empty():
-		if request.size() != Constants.new_cone.flavours_in_scoop.size(): return
+	if Constants.cone_in_hand and !Game.truck_inside.new_cone.flavours_in_scoop.is_empty():
+		if request.size() != Game.truck_inside.new_cone.flavours_in_scoop.size(): return
 		
-		for item in Constants.new_cone.flavours_in_scoop:
+		for item in Game.truck_inside.new_cone.flavours_in_scoop:
 			if !request.has(item): return
-			if Constants.new_cone.flavours_in_scoop.count(item) != request.count(item): return
+			if Game.truck_inside.new_cone.flavours_in_scoop.count(item) != request.count(item): return
 
 		leave_happily()

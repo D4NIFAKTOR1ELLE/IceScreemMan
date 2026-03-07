@@ -9,6 +9,9 @@ var puzzles: Array
 var current_puzzle: Node = null
 
 func initialise():
+	for child in panel.get_children():
+		child.free()
+	
 	puzzles = [sliding_puzzle, fuse_puzzle, whack_a_mole_puzzle]
 	puzzles.shuffle()
 	
@@ -33,7 +36,8 @@ func on_puzzle_beaten():
 		$AudioStreamPlayer.stream = load("res://assets/se/freesound_community-carengine-5998.mp3")
 		$AudioStreamPlayer.play()
 		Game.win()
-		$PanelContainer.get_child(0).queue_free()
+		if panel.get_child(0):
+			panel.get_child(0).queue_free()
 		return
 
 	current_puzzle.queue_free()
@@ -43,11 +47,13 @@ func on_puzzle_beaten():
 func _on_visibility_changed() -> void:
 	if visible:
 		panel.show()
-		panel.get_child(0).show()
+		if panel.get_child(0):
+			panel.get_child(0).show()
 		panel.process_mode = Node.PROCESS_MODE_INHERIT
 	else:
 		panel.hide()
-		panel.get_child(0).hide()
+		if panel.get_child(0):
+			panel.get_child(0).hide()
 		panel.process_mode = Node.PROCESS_MODE_DISABLED
 
 func _on_exit_button_pressed() -> void:
