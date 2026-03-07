@@ -55,5 +55,6 @@ var flavours: Dictionary = {
 	"Dryer Lint": Color.GRAY,
 	"Milk Cream": Color.CORNFLOWER_BLUE,
 	"Pasta Al Dente": Color.LIGHT_YELLOW,
-	"Bubblegum Blast": Color.DEEP_PINK
+	"Bubblegum Blast": Color.DEEP_PINK,
+	"Whaley Good": Color.BLUE
 }
