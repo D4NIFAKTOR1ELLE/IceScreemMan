@@ -1,8 +1,8 @@
 extends CanvasLayer
 
-@onready var sliding_puzzle = preload("res://game/MinigameSlidingPuzzle.tscn")
-@onready var fuse_puzzle = preload("res://game/MinigameFuses.tscn")
-@onready var whack_a_mole_puzzle = preload("res://game/MinigameWhackAMole.tscn")
+@onready var sliding_puzzle = preload("res://game/minigames/MinigameSlidingPuzzle.tscn")
+@onready var fuse_puzzle = preload("res://game/minigames/MinigameFuses.tscn")
+@onready var whack_a_mole_puzzle = preload("res://game/minigames/MinigameWhackAMole.tscn")
 @onready var panel: PanelContainer = $PanelContainer
 
 var puzzles: Array
