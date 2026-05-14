@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8owdmmxpnjus"]
 
-[ext_resource type="Texture2D" uid="uid://btjjqxolgokax" path="res://assets/art/extra/ice_cream_container.png" id="1_khpur"]
+[ext_resource type="Texture2D" uid="uid://btjjqxolgokax" path="res://assets/art/elements/ice_cream_container.png" id="1_khpur"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khpur"]
 bg_color = Color(0.19553718, 0.1361045, 0.21708363, 1)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cebmytw6mr237"]
 
 [ext_resource type="Texture2D" uid="uid://34tkdjsobqol" path="res://assets/art/extra/comic.jpg" id="1_ikjta"]
-[ext_resource type="Script" uid="uid://ve0ujqpflpog" path="res://game/elements/story.gd" id="1_smso2"]
+[ext_resource type="Script" uid="uid://ve0ujqpflpog" path="res://game/elements/script/story.gd" id="1_smso2"]
 [ext_resource type="AudioStream" uid="uid://bnodjjmrt4wou" path="res://assets/se/IceCreamTruck1.mp3" id="1_tgyml"]
 
 [sub_resource type="Animation" id="Animation_vxeyq"]

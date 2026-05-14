@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cbb0c5shpy67j"]
 
 [ext_resource type="Script" uid="uid://c02v4x02xk6bc" path="res://ui/script/zombie_window.gd" id="1_gi2vt"]
-[ext_resource type="Texture2D" uid="uid://b018kce6gg0k7" path="res://assets/art/extra/background_outside_blur.png" id="2_gi2vt"]
-[ext_resource type="Texture2D" uid="uid://troeflg77epk" path="res://assets/art/extra/window_mask.png" id="2_xrwar"]
+[ext_resource type="Texture2D" uid="uid://b018kce6gg0k7" path="res://assets/art/backgrounds/background_outside_blur.png" id="2_gi2vt"]
+[ext_resource type="Texture2D" uid="uid://troeflg77epk" path="res://assets/art/backgrounds/window_mask.png" id="2_xrwar"]
 
 [node name="ZombieWindow" type="Control" unique_id=1494242549]
 layout_mode = 3

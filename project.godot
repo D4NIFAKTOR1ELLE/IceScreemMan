@@ -30,6 +30,14 @@ Transition="*uid://cqov7dmub3q0d"
 
 window/stretch/aspect="ignore"
 
+[file_customization]
+
+folder_colors={
+"res://assets/": "yellow",
+"res://game/": "green",
+"res://ui/": "blue"
+}
+
 [gui]
 
 theme/custom_font="uid://c0e4wih8f2tt0"

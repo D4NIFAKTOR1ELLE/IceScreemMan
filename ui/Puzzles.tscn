@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://defvlperpo7m4"]
 
 [ext_resource type="Script" uid="uid://iqbm7f8r7wsx" path="res://ui/script/puzzles.gd" id="1_24mw7"]
-[ext_resource type="Texture2D" uid="uid://domnva2a0hy55" path="res://assets/art/extra/puzzles_bg.png" id="2_4ni2q"]
+[ext_resource type="Texture2D" uid="uid://domnva2a0hy55" path="res://assets/art/backgrounds/puzzles_bg.png" id="2_4ni2q"]
 [ext_resource type="AudioStream" uid="uid://dlh25pmjseb6l" path="res://assets/se/dragon-studio-correct-472358.mp3" id="3_y1vir"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_24mw7"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cxm1oem6unq2m"]
 
-[ext_resource type="Script" uid="uid://cbhgcccaqjmh2" path="res://game/elements/zombie.gd" id="1_ioe0b"]
-[ext_resource type="Texture2D" uid="uid://cnpfhpr5o01cn" path="res://assets/art/extra/scoop.png" id="2_tg2ng"]
+[ext_resource type="Script" uid="uid://cbhgcccaqjmh2" path="res://game/elements/script/zombie.gd" id="1_ioe0b"]
+[ext_resource type="Texture2D" uid="uid://cnpfhpr5o01cn" path="res://assets/art/elements/scoop.png" id="2_tg2ng"]
 [ext_resource type="Texture2D" uid="uid://dkh8n5bum4wq2" path="res://assets/art/zombies/mandela1.png" id="2_w1o8s"]
 [ext_resource type="Texture2D" uid="uid://8eeftsorlsje" path="res://assets/art/extra/request_bubble.png" id="3_7tdba"]
 

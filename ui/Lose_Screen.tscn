@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dw1y1qsha3ibx"]
 
 [ext_resource type="Script" uid="uid://bfcjf7alg6kea" path="res://ui/script/lose_screen.gd" id="1_6fb5u"]
-[ext_resource type="Texture2D" uid="uid://cfyj1n4bo6cb6" path="res://assets/art/Placeholder/TempLooseScreen.png" id="1_fx725"]
+[ext_resource type="Texture2D" uid="uid://cfyj1n4bo6cb6" path="res://assets/art/minigames/TempLooseScreen.png" id="1_fx725"]
 [ext_resource type="FontFile" uid="uid://c0e4wih8f2tt0" path="res://assets/fonts/calligtastrophe/Calligstrophe.ttf" id="2_qqn1k"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bkdcy"]

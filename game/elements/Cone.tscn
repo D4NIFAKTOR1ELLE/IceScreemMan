@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://nracvaq6653c"]
 
-[ext_resource type="Script" uid="uid://sthrie7rn5sf" path="res://game/elements/cone.gd" id="1_kvamh"]
-[ext_resource type="Texture2D" uid="uid://dh6n3gxhydirk" path="res://assets/art/extra/cone.png" id="2_m1nd6"]
+[ext_resource type="Script" uid="uid://sthrie7rn5sf" path="res://game/elements/script/cone.gd" id="1_kvamh"]
+[ext_resource type="Texture2D" uid="uid://dh6n3gxhydirk" path="res://assets/art/elements/cone.png" id="2_m1nd6"]
 [ext_resource type="PackedScene" uid="uid://p07enkwwxok4" path="res://game/elements/Scoop.tscn" id="2_xqco8"]
-[ext_resource type="Texture2D" uid="uid://dmd6xp8g71l84" path="res://assets/art/extra/cone_scoop.png" id="4_m1nd6"]
+[ext_resource type="Texture2D" uid="uid://dmd6xp8g71l84" path="res://assets/art/elements/cone_scoop.png" id="4_m1nd6"]
 
 [node name="Cone" type="Control" unique_id=846486343]
 layout_mode = 3
